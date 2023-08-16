@@ -17,6 +17,7 @@ var movement_target: Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	previous_position = position
+	movement_target = position
 	pass # Replace with function body.
 
 func _input(event: InputEvent) -> void:

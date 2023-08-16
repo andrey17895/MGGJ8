@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7b2dj2sqr6pr"]
+
+[ext_resource type="Script" path="res://scenes/adventure/Adventure.gd" id="1_etwkg"]
+[ext_resource type="PackedScene" uid="uid://cmmpg2h30jt8" path="res://scenes/adventure/locations/room/room.tscn" id="2_brlka"]
+
+[node name="Adventure" type="Node2D"]
+script = ExtResource("1_etwkg")
+start_location = ExtResource("2_brlka")
+
+[node name="LocationManager" type="Node" parent="."]

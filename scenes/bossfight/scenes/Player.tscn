@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn76kffvb2a7x"]
+
+[ext_resource type="Script" path="res://scenes/bossfight/scenes/Player.gd" id="1_w7t6n"]
+[ext_resource type="PackedScene" uid="uid://dvui1funt6gud" path="res://scenes/bossfight/scenes/Projectile.tscn" id="2_stwqh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwyyc"]
+size = Vector2(24, 38)
+
+[node name="Player" type="Area2D" groups=["player"]]
+script = ExtResource("1_w7t6n")
+projectile_scene = ExtResource("2_stwqh")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(3.61539, -2.41379)
+scale = Vector2(1.53846, 1.72414)
+color = Color(0.117647, 0.560784, 0.337255, 1)
+polygon = PackedVector2Array(-11, -16, -11, -3, -16, -3, -16, -2, -11, -2, -11, 13, 6, 13, 6, -2, 10, -2, 10, -3, 6, -3, 6, -16, 2, -10, -7, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fwyyc")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(18, -7)
+
+[node name="ShotTimer" type="Timer" parent="."]
+wait_time = 0.4
+autostart = true
+
+[node name="SpeedTimer" type="Timer" parent="."]
+
+[node name="InstantVelocity" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -52.0
+offset_right = 20.0
+offset_bottom = -29.0
+text = "123"
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
+[connection signal="timeout" from="SpeedTimer" to="." method="_on_speed_timer_timeout"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqxftuy1ia2dt"]
+
+[ext_resource type="Script" path="res://scenes/adventure/locations/forest/forest.gd" id="1_jxm23"]
+[ext_resource type="Texture2D" uid="uid://dhtksbnyh8hcq" path="res://scenes/adventure/locations/forest/assets/forest_background.png" id="1_unih8"]
+[ext_resource type="PackedScene" uid="uid://ca74qrcvqrfd3" path="res://scenes/adventure/common/adv_character.tscn" id="3_icyv0"]
+[ext_resource type="PackedScene" uid="uid://clxnfy0qcdcjy" path="res://scenes/adventure/common/door.tscn" id="3_pee51"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dr62u"]
+radius = 20.0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1r5pj"]
+vertices = PackedVector2Array(261, 567, 308, 454, 714, 439, 931, 531)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(261, 567, 308, 454, 714, 439, 931, 531)])
+
+[node name="Forest" type="Node2D"]
+script = ExtResource("1_jxm23")
+
+[node name="ForestBackground" type="Sprite2D" parent="."]
+position = Vector2(592.263, 338.25)
+scale = Vector2(1.20053, 1.20053)
+texture = ExtResource("1_unih8")
+
+[node name="Door" parent="." instance=ExtResource("3_pee51")]
+position = Vector2(666, 416)
+door_to = "res://scenes/adventure/locations/room/room.tscn"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(898, 528)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dr62u")
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+color = Color(1, 0.00784314, 0, 1)
+polygon = PackedVector2Array(-17, 10, -19, -19, 21, -15, 22, 12)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_1r5pj")
+
+[node name="AdvCharacter" parent="." instance=ExtResource("3_icyv0")]
+position = Vector2(320, 530)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://cqw4t08jpknsb"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_fbdgx"]
+[ext_resource type="Script" path="res://SceneManager.gd" id="1_mpuut"]
+[ext_resource type="PackedScene" uid="uid://iaq03ydn5nn" path="res://scenes/main_menu/MainMenu.tscn" id="2_4darc"]
+[ext_resource type="PackedScene" uid="uid://c7b2dj2sqr6pr" path="res://scenes/adventure/Adventure.tscn" id="4_asj3g"]
+[ext_resource type="PackedScene" uid="uid://bwgiy4ofxr38s" path="res://scenes/bossfight/Bossfight.tscn" id="4_d7xdy"]
+[ext_resource type="PackedScene" uid="uid://blwsuxa7t7746" path="res://scenes/credits/credits.tscn" id="5_a4ffm"]
+[ext_resource type="Texture2D" uid="uid://bwar1e2vqc72" path="res://assets/volume.png" id="5_gm6x6"]
+[ext_resource type="Script" path="res://common/VolumeControl.gd" id="5_vmxr6"]
+[ext_resource type="Texture2D" uid="uid://b5vcfwd437dyp" path="res://assets/no_volume.png" id="6_0nbcl"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_fbdgx")
+
+[node name="SceneManager" type="Node" parent="."]
+script = ExtResource("1_mpuut")
+scenes = Array[PackedScene]([ExtResource("2_4darc"), ExtResource("4_d7xdy"), ExtResource("4_asj3g"), ExtResource("5_a4ffm")])
+
+[node name="PauseMenu" type="Control" parent="."]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.133333)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -119.5
+offset_right = 101.0
+offset_bottom = 119.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Pause Menu"
+
+[node name="ResumeButton" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Resume"
+
+[node name="OptionsButton" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Options
+"
+
+[node name="QuitButton" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="VolumeButton" type="TextureButton" parent="."]
+process_mode = 3
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -59.0
+offset_right = -1.0
+offset_bottom = 58.0
+grow_horizontal = 0
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource("5_gm6x6")
+texture_pressed = ExtResource("6_0nbcl")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("5_vmxr6")
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="toggled" from="VolumeButton" to="VolumeButton" method="_on_volume_button_toggled"]

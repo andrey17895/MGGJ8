@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://iaq03ydn5nn"]
+
+[ext_resource type="Script" path="res://scenes/main_menu/MainMenu.gd" id="1_nscpt"]
+[ext_resource type="Texture2D" uid="uid://dmqybg7yan3i" path="res://scenes/main_menu/assets/game_logo.png" id="2_p3v5q"]
+[ext_resource type="Texture2D" uid="uid://cfa71danguedm" path="res://scenes/main_menu/assets/background.png" id="2_pakt6"]
+[ext_resource type="Texture2D" uid="uid://c2kplb1m8p87l" path="res://scenes/main_menu/assets/heart.png" id="3_0uhsi"]
+[ext_resource type="Texture2D" uid="uid://hxclcvks8i7r" path="res://scenes/main_menu/assets/cataur.png" id="4_i8bex"]
+[ext_resource type="AudioStream" uid="uid://daoxkrrpyr3lf" path="res://scenes/main_menu/assets/background_music.mp3" id="6_vgfda"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_nscpt")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(569, 310)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_pakt6")
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+position = Vector2(856, 394)
+emitting = false
+amount = 10
+lifetime = 2.0
+speed_scale = 0.45
+randomness = 0.22
+texture = ExtResource("3_0uhsi")
+emission_shape = 3
+emission_rect_extents = Vector2(80, 80)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 92.89
+initial_velocity_max = 283.73
+angular_velocity_max = 259.68
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+position = Vector2(0, 4)
+texture = ExtResource("2_p3v5q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="NewGameButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "New game"
+
+[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Quit"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Cute" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer"]
+texture = ExtResource("4_i8bex")
+
+[node name="PulseTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_vgfda")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="PulseTimer" to="." method="_on_pulse_timer_timeout"]

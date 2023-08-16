@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwgiy4ofxr38s"]
+
+[ext_resource type="Script" path="res://scenes/bossfight/Bossfight.gd" id="1_b4qb8"]
+[ext_resource type="PackedScene" uid="uid://bn76kffvb2a7x" path="res://scenes/bossfight/scenes/Player.tscn" id="2_2t3g0"]
+[ext_resource type="PackedScene" uid="uid://d0000av81uipe" path="res://scenes/bossfight/scenes/enemy.tscn" id="3_yha5m"]
+
+[node name="Bossfight" type="Node2D"]
+script = ExtResource("1_b4qb8")
+
+[node name="Player" parent="." instance=ExtResource("2_2t3g0")]
+position = Vector2(216, 259)
+
+[node name="Enemy" parent="." instance=ExtResource("3_yha5m")]
+position = Vector2(785, 238)
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

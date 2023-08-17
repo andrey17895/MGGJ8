@@ -22,19 +22,23 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		instant_velocity = event.relative
 		movement_target += event.relative
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	var direction = movement_target - position
 	var move = direction.normalized() * speed * delta
+	instant_velocity = direction.normalized()
 	if direction.length() > move.length():
 		position += move
 	else:
 		position += direction
+	
 	position.x = clamp(position.x, top_left.x, bottom_right.x)
 	position.y = clamp(position.y, top_left.y, bottom_right.y)
+	
+	movement_target.x = clamp(movement_target.x, top_left.x, bottom_right.x)
+	movement_target.y = clamp(movement_target.y, top_left.y, bottom_right.y)
 	
 func _process(_delta: float) -> void:
 	iv_label.text = str(instant_velocity)
@@ -45,10 +49,4 @@ func _on_shot_timer_timeout() -> void:
 	projectile.position = muzzle.global_position
 	projectile.inherited_velocity = instant_velocity
 	get_parent().add_child(projectile)
-	pass # Replace with function body.
-
-
-func _on_speed_timer_timeout() -> void:
-	#instant_velocity = position - previous_position
-	#previous_position = position
 	pass # Replace with function body.

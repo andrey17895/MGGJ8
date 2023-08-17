@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0000av81uipe"]
+[gd_scene load_steps=7 format=3 uid="uid://d0000av81uipe"]
 
 [ext_resource type="Script" path="res://scenes/bossfight/scenes/Enemy.gd" id="1_6f7jh"]
+[ext_resource type="PackedScene" uid="uid://6212sap2vvmx" path="res://scenes/bossfight/scenes/enemy_projectile.tscn" id="2_hltrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1xr1"]
 size = Vector2(80, 100)
@@ -44,11 +45,14 @@ _data = {
 
 [node name="Enemy" type="Area2D" groups=["enemy"]]
 script = ExtResource("1_6f7jh")
+projectile_scene = ExtResource("2_hltrb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_j1xr1")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2(2, 2)
 color = Color(0.439216, 0.0392157, 0.129412, 1)
 polygon = PackedVector2Array(34, 49, 40, -49, -41, -48, -32, 51)
 
@@ -56,3 +60,12 @@ polygon = PackedVector2Array(34, 49, 40, -49, -41, -48, -32, 51)
 libraries = {
 "": SubResource("AnimationLibrary_j20vq")
 }
+
+[node name="FireTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(-41, 0)
+
+[connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]

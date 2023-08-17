@@ -43,6 +43,8 @@ func _physics_process(delta: float) -> void:
 func _process(_delta: float) -> void:
 	iv_label.text = str(instant_velocity)
 
+func hit() -> void:
+	print("TODO animate hit")
 
 func _on_shot_timer_timeout() -> void:
 	var projectile = projectile_scene.instantiate()

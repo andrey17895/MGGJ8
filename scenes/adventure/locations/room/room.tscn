@@ -20,7 +20,7 @@ texture = ExtResource("1_7iwoy")
 
 [node name="Door" parent="." instance=ExtResource("3_064sq")]
 position = Vector2(574, 244)
-door_to = "res://scenes/adventure/locations/forest/forest.tscn"
+door_to = 1
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_8b2cg")

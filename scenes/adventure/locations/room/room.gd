@@ -1,1 +1,1 @@
-extends Location
+extends LocationScene

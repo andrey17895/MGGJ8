@@ -1,25 +1,42 @@
 extends Node
+class_name LocationManager
 
-@export var start_location: String = "res://scenes/adventure/locations/forest/forest.tscn"
+@export var start_location: Location = Location.Room
 
 signal adventure_ended
+
+enum Location {
+	Room,
+	Forest
+}
+
+var locations: Dictionary = {
+	Location.Room: "res://scenes/adventure/locations/room/room.tscn",
+	Location.Forest: "res://scenes/adventure/locations/forest/forest.tscn"
+}
+
+var current_scene: LocationScene
 
 func _ready() -> void:
 	load_loaction(start_location)
 			
 
-func load_loaction(location: String):
-	add_child(load(location).instantiate())
-	#get_child(0).connect("adventure_finished", on_adventure_finished)
+func load_loaction(location: Location):
+	
+	current_scene = load(locations[location]).instantiate() as LocationScene
+	add_child(current_scene)
+	
+	current_scene.adventure_finished.connect(_on_adventure_finished)
+	
 	for node in get_tree().get_nodes_in_group("door"):
 		if node is Door:
 			(node as Door).location_exited.connect(_on_location_exited)
 	
 
-func _on_location_exited(location: String):
-	remove_child(get_child(0))
+func _on_location_exited(location: Location):
+	current_scene.queue_free()
 	load_loaction(location)
 
-func on_adventure_finished():
+func _on_adventure_finished():
 	print("finish adventure handled")
 	adventure_ended.emit()

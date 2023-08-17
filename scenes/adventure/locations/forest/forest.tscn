@@ -23,7 +23,6 @@ texture = ExtResource("1_unih8")
 
 [node name="Door" parent="." instance=ExtResource("3_pee51")]
 position = Vector2(666, 416)
-door_to = "res://scenes/adventure/locations/room/room.tscn"
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(898, 528)

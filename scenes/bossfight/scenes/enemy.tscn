@@ -6,9 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1xr1"]
 size = Vector2(80, 100)
 
-[node name="Enemy" type="Area2D" groups=["enemy"]]
+[node name="Enemy" type="Area2D" node_paths=PackedStringArray("polygon") groups=["enemy"]]
 script = ExtResource("1_6f7jh")
 projectile_scene = ExtResource("2_hltrb")
+polygon = NodePath("Polygon2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)

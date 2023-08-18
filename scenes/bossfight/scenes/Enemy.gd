@@ -1,4 +1,4 @@
-extends Area2D
+extends Character
 class_name Enemy
 
 @export var speed: float = 300
@@ -8,7 +8,6 @@ class_name Enemy
 
 @onready var muzzle: Marker2D = $Muzzle
 @onready var fire_timer: Timer = $FireTimer
-@onready var polygon: Polygon2D = $Polygon2D
 
 @onready var target: Node2D = get_tree().get_first_node_in_group("player")
 
@@ -17,12 +16,6 @@ var initial_position: Vector2
 
 enum AttackType { SINGLE, ROW, FAN, CIRCLE }
 
-func hit() -> void:
-	var original_color = polygon.color
-	polygon.color = Color.WHITE
-	await get_tree().create_timer(0.1).timeout
-	polygon.color = original_color
-	
 
 func _ready() -> void:
 	initial_position = self.position

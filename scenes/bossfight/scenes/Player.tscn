@@ -13,7 +13,7 @@ projectile_scene = ExtResource("2_stwqh")
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2(3.61539, -2.41379)
 scale = Vector2(1.53846, 1.72414)
-color = Color(0.117647, 0.560784, 0.337255, 1)
+color = Color(0.0784314, 0.513726, 0.0705882, 1)
 polygon = PackedVector2Array(-11, -16, -11, -3, -16, -3, -16, -2, -11, -2, -11, 13, 6, 13, 6, -2, 10, -2, 10, -3, 6, -3, 6, -16, 2, -10, -7, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

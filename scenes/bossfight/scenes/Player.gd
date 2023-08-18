@@ -6,6 +6,7 @@ extends Area2D
 
 @onready var muzzle: Marker2D = $Muzzle
 @onready var iv_label: Label = $InstantVelocity
+@onready var polygon: Polygon2D = $Polygon2D
 
 var instant_velocity: Vector2 = Vector2.ZERO
 var previous_position: Vector2
@@ -44,7 +45,10 @@ func _process(_delta: float) -> void:
 	iv_label.text = str(instant_velocity)
 
 func hit() -> void:
-	print("TODO animate hit")
+	var original_color = polygon.color
+	polygon.color = Color.WHITE
+	await get_tree().create_timer(0.1).timeout
+	polygon.color = original_color
 
 func _on_shot_timer_timeout() -> void:
 	var projectile = projectile_scene.instantiate()

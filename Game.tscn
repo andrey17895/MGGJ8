@@ -1,15 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqw4t08jpknsb"]
+[gd_scene load_steps=12 format=3 uid="uid://cqw4t08jpknsb"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_fbdgx"]
 [ext_resource type="PackedScene" uid="uid://cien2k5m1a475" path="res://common/scene_manager.tscn" id="2_p1t8s"]
+[ext_resource type="PackedScene" uid="uid://iaq03ydn5nn" path="res://scenes/main_menu/MainMenu.tscn" id="3_vg7k7"]
+[ext_resource type="PackedScene" uid="uid://bauabj7wiwe7f" path="res://scenes/dialogue/test/test_dialogue.tscn" id="4_meioc"]
 [ext_resource type="Texture2D" uid="uid://bwar1e2vqc72" path="res://assets/volume.png" id="5_gm6x6"]
+[ext_resource type="PackedScene" uid="uid://bqwsupbv48ac3" path="res://scenes/cute_cat/cute_cat.tscn" id="5_twmaj"]
 [ext_resource type="Script" path="res://common/VolumeControl.gd" id="5_vmxr6"]
 [ext_resource type="Texture2D" uid="uid://b5vcfwd437dyp" path="res://assets/no_volume.png" id="6_0nbcl"]
+[ext_resource type="PackedScene" uid="uid://bwgiy4ofxr38s" path="res://scenes/bossfight/Bossfight.tscn" id="6_md2ti"]
+[ext_resource type="PackedScene" uid="uid://c7b2dj2sqr6pr" path="res://scenes/adventure/Adventure.tscn" id="7_2mljv"]
+[ext_resource type="PackedScene" uid="uid://blwsuxa7t7746" path="res://scenes/credits/credits.tscn" id="8_a8wrf"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_fbdgx")
 
 [node name="SceneManager" parent="." instance=ExtResource("2_p1t8s")]
+scenes = Array[PackedScene]([ExtResource("3_vg7k7"), ExtResource("4_meioc"), ExtResource("5_twmaj"), ExtResource("6_md2ti"), ExtResource("7_2mljv"), ExtResource("8_a8wrf")])
 
 [node name="PauseMenu" type="Control" parent="."]
 process_mode = 2

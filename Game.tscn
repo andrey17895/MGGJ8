@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqw4t08jpknsb"]
+[gd_scene load_steps=10 format=3 uid="uid://cqw4t08jpknsb"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_fbdgx"]
 [ext_resource type="Script" path="res://SceneManager.gd" id="1_mpuut"]
 [ext_resource type="PackedScene" uid="uid://iaq03ydn5nn" path="res://scenes/main_menu/MainMenu.tscn" id="2_4darc"]
+[ext_resource type="PackedScene" uid="uid://bwgiy4ofxr38s" path="res://scenes/bossfight/Bossfight.tscn" id="4_5tj3p"]
 [ext_resource type="PackedScene" uid="uid://c7b2dj2sqr6pr" path="res://scenes/adventure/Adventure.tscn" id="4_td8uf"]
 [ext_resource type="PackedScene" uid="uid://blwsuxa7t7746" path="res://scenes/credits/credits.tscn" id="5_a4ffm"]
 [ext_resource type="Texture2D" uid="uid://bwar1e2vqc72" path="res://assets/volume.png" id="5_gm6x6"]
@@ -14,7 +15,7 @@ script = ExtResource("1_fbdgx")
 
 [node name="SceneManager" type="Node" parent="."]
 script = ExtResource("1_mpuut")
-scenes = Array[PackedScene]([ExtResource("2_4darc"), ExtResource("4_td8uf"), ExtResource("5_a4ffm")])
+scenes = Array[PackedScene]([ExtResource("2_4darc"), ExtResource("4_5tj3p"), ExtResource("4_td8uf"), ExtResource("5_a4ffm")])
 
 [node name="PauseMenu" type="Control" parent="."]
 process_mode = 2

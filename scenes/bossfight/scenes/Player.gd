@@ -6,7 +6,7 @@ class_name Player
 @export var projectile_scene: PackedScene
 
 @onready var muzzle: Marker2D = $Muzzle
-@onready var iv_label: Label = $InstantVelocity
+@onready var shot_timer: Timer = $ShotTimer
 
 var instant_velocity: Vector2 = Vector2.ZERO
 var previous_position: Vector2
@@ -41,8 +41,9 @@ func _physics_process(delta: float) -> void:
 	movement_target.x = clamp(movement_target.x, top_left.x, bottom_right.x)
 	movement_target.y = clamp(movement_target.y, top_left.y, bottom_right.y)
 	
-func _process(_delta: float) -> void:
-	iv_label.text = str(instant_velocity)
+
+func stop_shooting() -> void:
+	shot_timer.stop()
 
 
 func _on_shot_timer_timeout() -> void:

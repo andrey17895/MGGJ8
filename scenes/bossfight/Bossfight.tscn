@@ -10,7 +10,30 @@ script = ExtResource("1_b4qb8")
 [node name="Player" parent="." instance=ExtResource("2_2t3g0")]
 position = Vector2(216, 259)
 
-[node name="Enemy" parent="." instance=ExtResource("3_yha5m")]
+[node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_yha5m")]
 position = Vector2(988, 269)
+target = NodePath("../Player")
+
+[node name="PlayerHealth" type="ProgressBar" parent="."]
+modulate = Color(0.333333, 1, 0.309804, 1)
+offset_left = 39.0
+offset_top = 20.0
+offset_right = 251.0
+offset_bottom = 61.0
+value = 100.0
+show_percentage = false
+
+[node name="EnemyHealth" type="ProgressBar" parent="."]
+modulate = Color(1, 0.141176, 0.141176, 1)
+offset_left = 859.0
+offset_top = 23.0
+offset_right = 1112.0
+offset_bottom = 69.0
+value = 100.0
+show_percentage = false
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="character_killed" from="Player" to="." method="_on_player_character_killed"]
+[connection signal="health_changed" from="Player" to="." method="_on_player_health_changed"]
+[connection signal="character_killed" from="Enemy" to="." method="_on_enemy_character_killed"]
+[connection signal="health_changed" from="Enemy" to="." method="_on_enemy_health_changed"]

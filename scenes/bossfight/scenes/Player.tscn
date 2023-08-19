@@ -6,10 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwyyc"]
 size = Vector2(24, 38)
 
-[node name="Player" type="Area2D" node_paths=PackedStringArray("polygon") groups=["player"]]
+[node name="Player" type="Area2D" node_paths=PackedStringArray("polygon", "collision") groups=["player"]]
 script = ExtResource("1_w7t6n")
 projectile_scene = ExtResource("2_stwqh")
 polygon = NodePath("Polygon2D")
+collision = NodePath("CollisionShape2D")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2(3.61539, -2.41379)
@@ -27,14 +28,4 @@ position = Vector2(18, -7)
 wait_time = 0.4
 autostart = true
 
-[node name="SpeedTimer" type="Timer" parent="."]
-
-[node name="InstantVelocity" type="Label" parent="."]
-offset_left = -20.0
-offset_top = -52.0
-offset_right = 20.0
-offset_bottom = -29.0
-text = "123"
-
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]
-[connection signal="timeout" from="SpeedTimer" to="." method="_on_speed_timer_timeout"]

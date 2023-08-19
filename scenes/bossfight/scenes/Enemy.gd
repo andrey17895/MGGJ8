@@ -5,7 +5,6 @@ class_name Enemy
 @export var travel: int = 150
 @export var target: Node2D
 
-
 @export var projectile_scene: PackedScene
 
 @onready var muzzle: Marker2D = $Muzzle

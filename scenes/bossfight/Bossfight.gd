@@ -40,6 +40,5 @@ func _on_enemy_character_killed() -> void:
 
 func _on_player_character_killed() -> void:
 	player.set_process(false)
-	player.stop_shootiong()
 	_restart_scene()
 	pass

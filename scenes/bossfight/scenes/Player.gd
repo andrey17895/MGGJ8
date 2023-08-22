@@ -51,4 +51,4 @@ func _on_shot_timer_timeout() -> void:
 	projectile.position = muzzle.global_position
 	projectile.inherited_velocity = instant_velocity
 	get_parent().add_child(projectile)
-	pass # Replace with function body.
+	pass

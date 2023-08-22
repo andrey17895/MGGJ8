@@ -1,7 +1,7 @@
 extends Area2D
 
 var direction: Vector2 = Vector2.LEFT
-var speed: float = 500
+var speed: float = 400
 var inherited_velocity: Vector2 = Vector2.ZERO
 var inherited_speed: Vector2 = Vector2(50, 150)
 var damage: int = 30

@@ -4,7 +4,7 @@ var direction: Vector2 = Vector2.RIGHT
 var speed: float = 500
 var inherited_velocity: Vector2 = Vector2.ZERO
 var inherited_speed: Vector2 = Vector2(50, 150)
-var damage: int = 10
+var damage: int = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

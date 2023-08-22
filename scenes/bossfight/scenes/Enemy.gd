@@ -10,21 +10,27 @@ class_name Enemy
 @onready var muzzle: Marker2D = $Muzzle
 @onready var fire_timer: Timer = $FireTimer
 @onready var animation: AnimationPlayer = $EnemyAnimationPlayer
+@onready var pattern_manager: PatternManager = $PatternManager
+
+
+var current_pattern: ShootPattern
+
 
 
 var initial_position: Vector2
 
-enum AttackType { SINGLE, ROW, FAN, CIRCLE }
+var is_moving: bool = true
 
 
 func _ready() -> void:
 	initial_position = self.position
-	print_debug(get_tree().get_nodes_in_group("player"))
+	pattern_manager._switch_pattern()
 
 func _physics_process(delta: float) -> void:
-	position += Vector2(0, speed * delta)
-	if initial_position.distance_to(position) > travel:
-		speed *= -1
+	if is_moving:
+		position += Vector2(0, speed * delta)
+		if initial_position.distance_to(position) > travel:
+			speed *= -1
 	
 func _spawn_projectile(direction: Vector2) -> void:
 	var projectile = projectile_scene.instantiate()
@@ -33,17 +39,9 @@ func _spawn_projectile(direction: Vector2) -> void:
 	get_parent().add_child(projectile)
 
 func _on_fire_timer_timeout() -> void:
-	_shoot_row_pattern()
-#	_shoot_single_pattern()
+	if current_pattern:
+		current_pattern._shoot_pattern(position, target.position)
 	pass
-
-func _shoot_single_pattern():
-	_spawn_projectile(target.position - position)
-
-func _shoot_row_pattern():
-	for i in 4:
-		_spawn_projectile(target.position - position)
-		await get_tree().create_timer(0.2).timeout
 
 func _hit_animation() -> void:
 	animation.play("enemy_hit")
@@ -53,3 +51,14 @@ func _kill_animation() -> void:
 	fire_timer.stop()
 	animation.play("enemy_death")
 	await animation.animation_finished
+
+
+func _on_pattern_manager_shoot(direction: Vector2) -> void:
+	_spawn_projectile(direction)
+
+
+func _on_pattern_manager_pattern_switched(pattern: ShootPattern) -> void:
+	current_pattern = pattern
+	var setup = current_pattern._prepare()
+	is_moving = setup["movement"]
+	fire_timer.wait_time = setup["pacing"]

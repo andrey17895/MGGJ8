@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 	sprite.scale = Vector2(1 + progress_bar.value/800, 1 + progress_bar.value/800)
 	sprite.position = sprite_initital_position + Vector2(-progress_bar.value/1.5, 0)
 	push_sfx.pitch_scale = 1 + progress_bar.value/100
-	if not win and Input.is_action_just_pressed("ui_accept"):
+	if not win and (Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("click")):
 		progress_bar.value += 5
 		camera.shake(0.1, progress_bar.value / 10)
 		push_sfx.play()

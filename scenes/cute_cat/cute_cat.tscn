@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bqver8lhn6vhj" path="res://scenes/cute_cat/assets/cute.png" id="2_v4w1q"]
 [ext_resource type="Texture2D" uid="uid://2elhabu2047w" path="res://scenes/cute_cat/assets/gauge_background.png" id="3_faj8p"]
 [ext_resource type="Texture2D" uid="uid://f56n47hojjdm" path="res://scenes/cute_cat/assets/gauge_indicator.png" id="4_4d2do"]
-[ext_resource type="PackedScene" uid="uid://c06eo3bab3n6s" path="res://shaky_camera.tscn" id="5_6umey"]
+[ext_resource type="PackedScene" uid="uid://c06eo3bab3n6s" path="res://common/shaky_camera.tscn" id="5_6umey"]
 [ext_resource type="AudioStream" uid="uid://crxfh5hd7kxlc" path="res://scenes/cute_cat/assets/push.wav" id="6_t0chd"]
 [ext_resource type="AudioStream" uid="uid://dtijrgmy30ryw" path="res://scenes/cute_cat/assets/wow.mp3" id="7_cbsms"]
 

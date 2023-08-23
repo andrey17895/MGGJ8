@@ -19,7 +19,7 @@ func _ready() -> void:
 func _end_dialogue():
 	dialogue_ended.emit()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("click"):
 		draw_dialogue_line(get_next_line())
 

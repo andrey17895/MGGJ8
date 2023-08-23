@@ -3,7 +3,6 @@ extends Node
 @export var scenes: Array[PackedScene]
 
 @onready var animation: AnimationPlayer = $Animation
-@onready var scene: Node = $Scene
 
 var current_scene: Scene
 var index: int = 0

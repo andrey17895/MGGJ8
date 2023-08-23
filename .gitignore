@@ -1,6 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 
+# VSCode
+.vscode/
+
 # Godot-specific ignores
 .import/
 export.cfg

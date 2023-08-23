@@ -12,19 +12,19 @@ func _ready() -> void:
 	current_scene = _load_scene(scenes[0])
 
 
-
-func _load_scene(scene: PackedScene) -> Scene:
-	var instance = scene.instantiate() as Scene
+func _load_scene(p_scene: PackedScene) -> Scene:
+	var instance = p_scene.instantiate() as Scene
 	add_child(instance)
 	instance.scene_ended.connect(_on_scene_ended)
 	instance.scene_restarted.connect(_on_scene_restarted)
 	return instance
 
-func _change_scene_to(scene: PackedScene) -> void:
+
+func _change_scene_to(p_scene: PackedScene) -> void:
 	animation.play("fade_in")
 	await animation.animation_finished
 	current_scene.queue_free()
-	current_scene = _load_scene(scene)
+	current_scene = _load_scene(p_scene)
 	animation.play("fade_out")
 	await animation.animation_finished
 

@@ -37,4 +37,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Text"
 
+[node name="TypingTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.05
+
 [connection signal="dialogue_ended" from="." to="." method="_on_dialogue_ended"]
+[connection signal="timeout" from="TypingTimer" to="." method="_on_typing_timer_timeout"]

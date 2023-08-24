@@ -184,6 +184,7 @@ autostart = true
 
 [node name="AnimationAudio" type="AudioStreamPlayer2D" parent="."]
 volume_db = 10.0
+bus = &"Effects"
 
 [connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]
 [connection signal="pattern_switched" from="PatternManager" to="." method="_on_pattern_manager_pattern_switched"]

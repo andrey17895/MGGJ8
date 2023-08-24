@@ -36,6 +36,7 @@ show_percentage = false
 [node name="BakcgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_h8kda")
 autoplay = true
+bus = &"Music"
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="character_killed" from="Player" to="." method="_on_player_character_killed"]

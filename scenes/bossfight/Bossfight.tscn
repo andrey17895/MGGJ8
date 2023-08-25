@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwgiy4ofxr38s"]
+[gd_scene load_steps=8 format=3 uid="uid://bwgiy4ofxr38s"]
 
 [ext_resource type="Script" path="res://scenes/bossfight/Bossfight.gd" id="1_b4qb8"]
 [ext_resource type="PackedScene" uid="uid://bn76kffvb2a7x" path="res://scenes/bossfight/scenes/Player.tscn" id="2_2t3g0"]
 [ext_resource type="PackedScene" uid="uid://d0000av81uipe" path="res://scenes/bossfight/scenes/enemy.tscn" id="3_yha5m"]
 [ext_resource type="AudioStream" uid="uid://b3a6px7f4yjjv" path="res://scenes/bossfight/assets/Technocade.mp3" id="4_h8kda"]
+[ext_resource type="Texture2D" uid="uid://b80qes4poacha" path="res://scenes/bossfight/assets/bg_0.png" id="5_885fm"]
+[ext_resource type="Texture2D" uid="uid://cslefevdd81s0" path="res://scenes/bossfight/assets/bg_1.png" id="6_opjsc"]
+[ext_resource type="Texture2D" uid="uid://cq4vsbhjs5wfm" path="res://scenes/bossfight/assets/bg_2.png" id="7_0lav8"]
 
 [node name="Bossfight" type="Node2D"]
 script = ExtResource("1_b4qb8")
@@ -37,6 +40,35 @@ show_percentage = false
 stream = ExtResource("4_h8kda")
 autoplay = true
 bus = &"Music"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.05, 0.05)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+texture = ExtResource("5_885fm")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("6_opjsc")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource("7_0lav8")
+centered = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="ParallaxBackground"]
+color = Color(0.301961, 0.301961, 0.301961, 1)
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="character_killed" from="Player" to="." method="_on_player_character_killed"]

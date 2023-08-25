@@ -38,6 +38,7 @@ func _on_enemy_health_changed(percent) -> void:
 
 func _on_enemy_character_killed() -> void:
 	player.set_process(false)
+	player.set_process_input(false)
 	player.stop_shooting()
 	await enemy._kill_animation()
 	_end_scene()

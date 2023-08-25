@@ -11,11 +11,12 @@ class_name Enemy
 @onready var fire_timer: Timer = $FireTimer
 @onready var animation: AnimationPlayer = $EnemyAnimationPlayer
 @onready var pattern_manager: PatternManager = $PatternManager
+@onready var projectiles: Node = $Projectiles
 
 
 var current_pattern: ShootPattern
 
-
+var is_ready: bool = false
 
 var initial_position: Vector2
 
@@ -36,7 +37,7 @@ func _spawn_projectile(direction: Vector2) -> void:
 	var projectile = projectile_scene.instantiate()
 	projectile.direction = direction
 	projectile.position = muzzle.global_position
-	get_parent().add_child(projectile)
+	projectiles.add_child(projectile)
 
 func _on_fire_timer_timeout() -> void:
 	if current_pattern:
@@ -62,3 +63,8 @@ func _on_pattern_manager_pattern_switched(pattern: ShootPattern) -> void:
 	var setup = current_pattern._prepare()
 	is_moving = setup["movement"]
 	fire_timer.wait_time = setup["pacing"]
+
+
+func _on_character_killed():
+	for node in projectiles.get_children(true):
+		node.queue_free()

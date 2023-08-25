@@ -29,7 +29,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_l1wp7"]
 resource_name = "death"
-length = 3.5
+length = 4.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -133,7 +133,7 @@ color = Color(0.439216, 0.0392157, 0.129412, 1)
 polygon = PackedVector2Array(34, 49, 40, -49, -41, -48, -32, 51)
 
 [node name="FireTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.5
 autostart = true
 
 [node name="Muzzle" type="Marker2D" parent="."]
@@ -166,6 +166,9 @@ script = ExtResource("3_3mcop")
 
 [node name="Patterns" type="Node" parent="PatternManager"]
 
+[node name="Circular" type="Node" parent="PatternManager/Patterns"]
+script = ExtResource("7_5r3vm")
+
 [node name="Single" type="Node" parent="PatternManager/Patterns"]
 script = ExtResource("4_e0dqg")
 
@@ -175,17 +178,17 @@ script = ExtResource("5_6uaqo")
 [node name="Fan" type="Node" parent="PatternManager/Patterns"]
 script = ExtResource("6_h3ng5")
 
-[node name="Circular" type="Node" parent="PatternManager/Patterns"]
-script = ExtResource("7_5r3vm")
-
 [node name="AttackSwitchTimer" type="Timer" parent="PatternManager"]
 wait_time = 5.0
 autostart = true
+
+[node name="Projectiles" type="Node" parent="."]
 
 [node name="AnimationAudio" type="AudioStreamPlayer2D" parent="."]
 volume_db = 10.0
 bus = &"Effects"
 
+[connection signal="character_killed" from="." to="." method="_on_character_killed"]
 [connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]
 [connection signal="pattern_switched" from="PatternManager" to="." method="_on_pattern_manager_pattern_switched"]
 [connection signal="shoot" from="PatternManager" to="." method="_on_pattern_manager_shoot"]

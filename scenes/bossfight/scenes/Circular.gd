@@ -1,7 +1,7 @@
 extends ShootPattern
 class_name CircularShootPattern
 
-func _shoot_pattern(shooter: Vector2, target: Vector2) -> void:
+func _shoot_pattern(_shooter: Vector2, _target: Vector2) -> void:
 	var direction := Vector2.LEFT
 	var angle = deg_to_rad(15)
 	for i in 45:

@@ -1,14 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://dn7vyfv0gwa5d"]
 
-[ext_resource type="Script" path="res://scenes/dialogue/common/dialogue_window.gd" id="1_dm1fb"]
+[ext_resource type="Script" path="res://scenes/dialogue/common/dialogue_box.gd" id="1_hqupj"]
 
-[node name="dialogue_window" type="Node2D"]
-script = ExtResource("1_dm1fb")
-file_path = "res://scenes/dialogue/common/dialogue.json"
+[node name="DialogueBox" type="Node2D"]
+script = ExtResource("1_hqupj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 800.0
 offset_bottom = 200.0
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
 layout_mode = 1
@@ -41,5 +41,4 @@ text = "Text"
 unique_name_in_owner = true
 wait_time = 0.05
 
-[connection signal="dialogue_ended" from="." to="." method="_on_dialogue_ended"]
 [connection signal="timeout" from="TypingTimer" to="." method="_on_typing_timer_timeout"]

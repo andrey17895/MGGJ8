@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://eobtqry0jeb5"]
+
+[ext_resource type="Script" path="res://scenes/dialogue/common/dialogue_manager.gd" id="1_vn7or"]
+[ext_resource type="PackedScene" uid="uid://dn7vyfv0gwa5d" path="res://scenes/dialogue/common/dialogue_box.tscn" id="2_um7pm"]
+
+[node name="DialogueManager" type="Node2D"]
+script = ExtResource("1_vn7or")
+
+[node name="DialogueBox" parent="." instance=ExtResource("2_um7pm")]
+position = Vector2(191, 430)
+
+[connection signal="typing_ended" from="DialogueBox" to="." method="_on_dialogue_box_typing_ended"]

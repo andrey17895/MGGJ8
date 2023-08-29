@@ -20,6 +20,7 @@ func _ready() -> void:
 	draw_dialogue_line(get_next_index())
 	left_character.texture = left_texture
 	right_character.texture = right_texture
+	right_character.flip_h = true
 
 
 func _end_dialogue():
@@ -45,8 +46,14 @@ func draw_dialogue_line(i: int) -> void:
 		var line = lines[i]
 		if line.position == "left":
 			left_character.change_image(line.name, line.emotion)
+			if not left_character.is_active:
+				left_character.is_active = true
+				right_character.is_active = false
 		elif line.position == "right":
 			right_character.change_image(line.name, line.emotion)
+			if not right_character.is_active:
+				right_character.is_active = true
+				left_character.is_active = false
 		dialogue_box.draw_dialogue_line(line)
 	else:
 		dialogue_ended.emit()

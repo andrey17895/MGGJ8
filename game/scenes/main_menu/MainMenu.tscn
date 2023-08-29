@@ -39,29 +39,35 @@ size_flags_vertical = 4
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer"]
 position = Vector2(0, 4)
 texture = ExtResource("2_p3v5q")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 
-[node name="NewGameButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 text = "New game"
 
-[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Quit"
@@ -78,6 +84,6 @@ texture = ExtResource("4_i8bex")
 wait_time = 0.5
 autostart = true
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="PulseTimer" to="." method="_on_pulse_timer_timeout"]

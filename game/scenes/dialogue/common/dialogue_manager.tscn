@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://eobtqry0jeb5"]
+[gd_scene load_steps=6 format=3 uid="uid://eobtqry0jeb5"]
 
 [ext_resource type="Script" path="res://scenes/dialogue/common/dialogue_manager.gd" id="1_vn7or"]
+[ext_resource type="Texture2D" uid="uid://dlf7x2w1klluh" path="res://scenes/dialogue/characters/luci_default.png" id="2_e2imc"]
 [ext_resource type="PackedScene" uid="uid://dn7vyfv0gwa5d" path="res://scenes/dialogue/common/dialogue_box.tscn" id="2_um7pm"]
+[ext_resource type="Texture2D" uid="uid://j42707tfhh71" path="res://scenes/dialogue/characters/bean_default.png" id="3_r30sc"]
+[ext_resource type="PackedScene" uid="uid://6lvcht5dger6" path="res://scenes/dialogue/common/novel_character.tscn" id="3_rdlyi"]
 
 [node name="DialogueManager" type="Node2D"]
 script = ExtResource("1_vn7or")
+left_texture = ExtResource("2_e2imc")
+right_texture = ExtResource("3_r30sc")
+
+[node name="LeftCharacter" parent="." instance=ExtResource("3_rdlyi")]
+position = Vector2(241, 242)
+
+[node name="RightCharacter" parent="." instance=ExtResource("3_rdlyi")]
+position = Vector2(894, 240)
 
 [node name="DialogueBox" parent="." instance=ExtResource("2_um7pm")]
 position = Vector2(191, 430)

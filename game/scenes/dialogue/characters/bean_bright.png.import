@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4redvthjvwol"
-path="res://.godot/imported/bean.png-2fd5ba8d67a9b5e7c6f17d3a5be4d26a.ctex"
+uid="uid://d007okumklcmo"
+path="res://.godot/imported/bean_bright.png-ef5090bc262f3381d62bb60c4c156d26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/dialogue/test/assets/bean.png"
-dest_files=["res://.godot/imported/bean.png-2fd5ba8d67a9b5e7c6f17d3a5be4d26a.ctex"]
+source_file="res://scenes/dialogue/characters/bean_bright.png"
+dest_files=["res://.godot/imported/bean_bright.png-ef5090bc262f3381d62bb60c4c156d26.ctex"]
 
 [params]
 

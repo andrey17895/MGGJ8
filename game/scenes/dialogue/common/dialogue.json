@@ -1,22 +1,28 @@
 [
 	{
-		"name": "Cat",
+		"position": "left",
+		"name": "luci",
 		"line": "I am a cat"
 	},
 	{
-		"name": "Cat",
+		"position": "left",
+		"name": "luci",
 		"line": "And I make you a witch"
 	},
 	{
-		"name": "Girl",
+		"position": "right",
+		"emotion": "bright",
+		"name": "bean",
 		"line": "You're talking!!!"
 	},
 	{
-		"name": "Cat",
+		"position": "left",
+		"name": "luci",
 		"line": "Nope, you're just high"
 	},
 	{
-		"name": "Girl",
+		"position": "right",
+		"name": "bean",
 		"line": "Yeah"
 	}
 ]

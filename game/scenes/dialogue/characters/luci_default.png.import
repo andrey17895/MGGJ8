@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwj63c7rauwba"
-path="res://.godot/imported/luci.png-08e1e7c61c9244b4ebe7720d61b8a549.ctex"
+uid="uid://dlf7x2w1klluh"
+path="res://.godot/imported/luci_default.png-1f6be1d2162f35982afb023659045cac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/dialogue/test/assets/luci.png"
-dest_files=["res://.godot/imported/luci.png-08e1e7c61c9244b4ebe7720d61b8a549.ctex"]
+source_file="res://scenes/dialogue/characters/luci_default.png"
+dest_files=["res://.godot/imported/luci_default.png-1f6be1d2162f35982afb023659045cac.ctex"]
 
 [params]
 

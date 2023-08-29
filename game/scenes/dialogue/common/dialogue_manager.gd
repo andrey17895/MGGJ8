@@ -1,8 +1,12 @@
 extends Node2D
 
 @export_file("*.json") var file_path: String
+@export var left_texture: Texture
+@export var right_texture: Texture
 
 @onready var dialogue_box: DialogueBox = $DialogueBox
+@onready var left_character: NovelCharacter = $LeftCharacter
+@onready var right_character: NovelCharacter = $RightCharacter
 
 signal dialogue_ended
 
@@ -12,13 +16,10 @@ var index: int = 0
 
 func _ready() -> void:
 	var file = FileAccess.open(file_path, FileAccess.READ)
-	var parsed_dialogue = JSON.parse_string(file.get_as_text())
-	for entry in parsed_dialogue:
-		var line = DialogueLine.new()
-		line.name = entry["name"]
-		line.line = entry["line"]
-		lines.append(line)
-	draw_dialogue_line(get_next_line())
+	lines = DialogueParser.parse_text(file.get_as_text())
+	draw_dialogue_line(get_next_index())
+	left_character.texture = left_texture
+	right_character.texture = right_texture
 
 
 func _end_dialogue():
@@ -30,21 +31,26 @@ func _unhandled_input(event: InputEvent) -> void:
 		if dialogue_box.is_typing:
 			dialogue_box.skip_typing()
 		else:
-			draw_dialogue_line(get_next_line())
+			draw_dialogue_line(get_next_index())
 
 
-func get_next_line():
-	if index < lines.size():
-		var result = lines[index]
-		index += 1
-		return result
+func get_next_index() -> int:
+	var result = index
+	index += 1
+	return result
+		
+		
+func draw_dialogue_line(i: int) -> void:
+	if i < lines.size():
+		var line = lines[i]
+		if line.position == "left":
+			left_character.change_image(line.name, line.emotion)
+		elif line.position == "right":
+			right_character.change_image(line.name, line.emotion)
+		dialogue_box.draw_dialogue_line(line)
 	else:
-		_end_dialogue()
-		return null
-		
-		
-func draw_dialogue_line(line: DialogueLine) -> void:
-	dialogue_box.draw_dialogue_line(line)
+		dialogue_ended.emit()
+		return
 
 
 func _on_dialogue_ended() -> void:

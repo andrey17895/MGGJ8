@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6lvcht5dger6"]
+
+[ext_resource type="Script" path="res://scenes/dialogue/common/novel_character.gd" id="1_lvua8"]
+
+[node name="NovelCharacter" type="Sprite2D"]
+script = ExtResource("1_lvua8")

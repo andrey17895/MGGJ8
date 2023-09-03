@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bn76kffvb2a7x"]
+[gd_scene load_steps=5 format=3 uid="uid://bn76kffvb2a7x"]
 
 [ext_resource type="Script" path="res://scenes/bossfight/scenes/Player.gd" id="1_w7t6n"]
 [ext_resource type="PackedScene" uid="uid://dvui1funt6gud" path="res://scenes/bossfight/scenes/Projectile.tscn" id="2_stwqh"]
+[ext_resource type="Texture2D" uid="uid://c025ojph5bfb3" path="res://scenes/bossfight/assets/bossfight_player.png" id="3_74a42"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwyyc"]
-size = Vector2(24, 38)
+size = Vector2(33, 25)
 
 [node name="Player" type="Area2D" node_paths=PackedStringArray("polygon", "collision") groups=["player"]]
 script = ExtResource("1_w7t6n")
@@ -13,19 +14,27 @@ polygon = NodePath("Polygon2D")
 collision = NodePath("CollisionShape2D")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
 position = Vector2(3.61539, -2.41379)
 scale = Vector2(1.53846, 1.72414)
 color = Color(0.0784314, 0.513726, 0.0705882, 1)
 polygon = PackedVector2Array(-11, -16, -11, -3, -16, -3, -16, -2, -11, -2, -11, 13, 6, 13, 6, -2, 10, -2, 10, -3, 6, -3, 6, -16, 2, -10, -7, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_fwyyc")
 
 [node name="Muzzle" type="Marker2D" parent="."]
-position = Vector2(18, -7)
+position = Vector2(30, -11)
 
 [node name="ShotTimer" type="Timer" parent="."]
 wait_time = 0.4
 autostart = true
+
+[node name="BossfightPlayer" type="Sprite2D" parent="."]
+position = Vector2(4, -2)
+rotation = 0.539307
+scale = Vector2(0.159272, 0.159272)
+texture = ExtResource("3_74a42")
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://6g5nbbh4kfon"]
+
+[ext_resource type="Script" path="res://common/scene.gd" id="1_dr5rq"]
+[ext_resource type="PackedScene" uid="uid://bdkhusfniyafv" path="res://scenes/box_puzzle/box.tscn" id="2_mhukg"]
+[ext_resource type="PackedScene" uid="uid://cj0hfwsj68uut" path="res://scenes/box_puzzle/wall.tscn" id="3_dbib2"]
+
+[node name="BoxPuzzle" type="Node2D"]
+script = ExtResource("1_dr5rq")
+
+[node name="Box" parent="." instance=ExtResource("2_mhukg")]
+position = Vector2(273, 136)
+
+[node name="Wall" parent="." instance=ExtResource("3_dbib2")]
+position = Vector2(147, 236)

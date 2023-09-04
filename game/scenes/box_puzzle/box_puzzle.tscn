@@ -13,7 +13,10 @@ size = Vector2(300, 50)
 script = ExtResource("1_p486h")
 
 [node name="Field" type="Node2D" parent="."]
-position = Vector2(175, 25)
+position = Vector2(289, 37)
+
+[node name="BoxRed" parent="Field" instance=ExtResource("5_nb4da")]
+position = Vector2(125, 75)
 
 [node name="Box" parent="Field" instance=ExtResource("2_mhukg")]
 position = Vector2(175, 225)
@@ -60,21 +63,25 @@ position = Vector2(25, 275)
 position = Vector2(25, 325)
 
 [node name="Wall19" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+visible = false
 modulate = Color(1, 1, 0.0784314, 1)
 position = Vector2(75, 325)
 collision_layer = 8
 
 [node name="Wall20" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+visible = false
 modulate = Color(1, 1, 0.0784314, 1)
 position = Vector2(125, 325)
 collision_layer = 8
 
 [node name="Wall21" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+visible = false
 modulate = Color(1, 1, 0.0784314, 1)
 position = Vector2(175, 325)
 collision_layer = 8
 
 [node name="Wall22" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+visible = false
 modulate = Color(1, 1, 0.0784314, 1)
 position = Vector2(225, 325)
 collision_layer = 8
@@ -115,15 +122,12 @@ position = Vector2(275, 325)
 [node name="Wall17" parent="Field/Walls" instance=ExtResource("3_dbib2")]
 position = Vector2(275, 25)
 
-[node name="BoxRed" parent="Field" instance=ExtResource("5_nb4da")]
-position = Vector2(125, 75)
-
-[node name="WinArea" type="Area2D" parent="."]
-position = Vector2(327, 360)
+[node name="WinArea" type="Area2D" parent="Field"]
+position = Vector2(152, 335)
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Field/WinArea"]
 shape = SubResource("RectangleShape2D_4002g")
 
-[connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]
+[connection signal="body_entered" from="Field/WinArea" to="." method="_on_win_area_body_entered"]

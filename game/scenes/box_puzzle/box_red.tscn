@@ -1,17 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://by2k5rwea6hae"]
+[gd_scene load_steps=4 format=3 uid="uid://by2k5rwea6hae"]
 
 [ext_resource type="Script" path="res://scenes/box_puzzle/box.gd" id="1_tmqy5"]
+[ext_resource type="Texture2D" uid="uid://oqmcplwmlrgg" path="res://scenes/box_puzzle/assets/box2-2.png" id="2_wos7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dyhl"]
 size = Vector2(99, 99)
 
 [node name="BoxRed" type="CharacterBody2D" groups=["boxes", "red"]]
+texture_filter = 1
 collision_layer = 5
 script = ExtResource("1_tmqy5")
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.905882, 0, 0.203922, 1)
-polygon = PackedVector2Array(-25, -25, 75, -25, 75, 75, -25, 75)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(25, 25)
@@ -22,5 +20,9 @@ shape = SubResource("RectangleShape2D_0dyhl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(25, 25)
 shape = SubResource("RectangleShape2D_0dyhl")
+
+[node name="Box2-2" type="Sprite2D" parent="."]
+position = Vector2(25, 25)
+texture = ExtResource("2_wos7m")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

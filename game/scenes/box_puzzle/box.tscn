@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdkhusfniyafv"]
+[gd_scene load_steps=4 format=3 uid="uid://bdkhusfniyafv"]
 
 [ext_resource type="Script" path="res://scenes/box_puzzle/box.gd" id="1_g3wu4"]
+[ext_resource type="Texture2D" uid="uid://d0k4y20hlkinf" path="res://scenes/box_puzzle/assets/box1-1.png" id="2_t4wui"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dyhl"]
 size = Vector2(49, 49)
@@ -9,10 +10,6 @@ size = Vector2(49, 49)
 collision_mask = 9
 script = ExtResource("1_g3wu4")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0, 1, 0.737255, 1)
-polygon = PackedVector2Array(-25, -25, 25, -25, 25, 25, -25, 25)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0dyhl")
 
@@ -20,5 +17,9 @@ shape = SubResource("RectangleShape2D_0dyhl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_0dyhl")
+
+[node name="Box1-1" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_t4wui")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

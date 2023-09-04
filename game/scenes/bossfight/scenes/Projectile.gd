@@ -14,8 +14,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	var direction_movement = direction.normalized() * speed * delta
-	var inherited_movement = inherited_velocity * inherited_speed * delta
-	position += direction_movement + inherited_movement
+	# var inherited_movement = inherited_velocity * inherited_speed * delta
+	position += direction_movement
 
 
 func _on_visible_on_screen_enabler_2d_screen_exited() -> void:

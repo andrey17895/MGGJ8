@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/bossfight/scenes/Player.gd" id="1_w7t6n"]
 [ext_resource type="PackedScene" uid="uid://dvui1funt6gud" path="res://scenes/bossfight/scenes/Projectile.tscn" id="2_stwqh"]
-[ext_resource type="Texture2D" uid="uid://c025ojph5bfb3" path="res://scenes/bossfight/assets/bossfight_player.png" id="3_74a42"]
+[ext_resource type="Texture2D" uid="uid://dr1trkxabyfqw" path="res://scenes/bossfight/assets/bossfight_player_chibi.png" id="3_4rkcx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwyyc"]
 size = Vector2(33, 25)
@@ -35,6 +35,6 @@ autostart = true
 position = Vector2(4, -2)
 rotation = 0.539307
 scale = Vector2(0.159272, 0.159272)
-texture = ExtResource("3_74a42")
+texture = ExtResource("3_4rkcx")
 
 [connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

@@ -46,6 +46,9 @@ func _on_enemy_character_killed() -> void:
 
 
 func _on_player_character_killed() -> void:
+	player.stop_shooting()
+	player.set_process_input(false)
 	player.set_process(false)
+	player.play_death_animation()
 	_restart_scene()
 	pass

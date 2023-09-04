@@ -13,7 +13,8 @@ size = Vector2(300, 50)
 script = ExtResource("1_p486h")
 
 [node name="Field" type="Node2D" parent="."]
-position = Vector2(289, 37)
+position = Vector2(275, 25)
+scale = Vector2(1.6, 1.6)
 
 [node name="BoxRed" parent="Field" instance=ExtResource("5_nb4da")]
 position = Vector2(125, 75)
@@ -22,13 +23,13 @@ position = Vector2(125, 75)
 position = Vector2(175, 225)
 
 [node name="Box2" parent="Field" instance=ExtResource("2_mhukg")]
-position = Vector2(175, 175)
+position = Vector2(225, 275)
 
 [node name="Box3" parent="Field" instance=ExtResource("2_mhukg")]
 position = Vector2(125, 225)
 
 [node name="Box4" parent="Field" instance=ExtResource("2_mhukg")]
-position = Vector2(125, 175)
+position = Vector2(75, 275)
 
 [node name="BoxLong1" parent="Field" instance=ExtResource("4_p3nxr")]
 position = Vector2(225, 75)

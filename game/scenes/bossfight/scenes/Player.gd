@@ -11,7 +11,9 @@ class_name Player
 var instant_velocity: Vector2 = Vector2.ZERO
 var previous_position: Vector2
 
-var speed: float = 400
+var speed: float = 500
+
+var is_dead = false
 
 var movement_target: Vector2
 
@@ -41,6 +43,17 @@ func _physics_process(delta: float) -> void:
 	movement_target.x = clamp(movement_target.x, top_left.x, bottom_right.x)
 	movement_target.y = clamp(movement_target.y, top_left.y, bottom_right.y)
 	
+
+func play_death_animation():
+	if not is_dead:
+		is_dead = true
+
+		var tween = create_tween().set_parallel(true)
+		tween.tween_property(self, "position", position + Vector2(0, -20), 0.2).set_trans(Tween.TRANS_CUBIC)
+		tween.chain().tween_property(self, "position", Vector2(position.x + 100, 1000), 2).set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(self, "rotation", deg_to_rad(450), 1.5).set_trans(Tween.TRANS_CUBIC)
+		tween.chain().tween_property(self, "visible", false, 0)
+
 
 func stop_shooting() -> void:
 	shot_timer.stop()

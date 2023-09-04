@@ -1,14 +1,129 @@
-[gd_scene load_steps=4 format=3 uid="uid://6g5nbbh4kfon"]
+[gd_scene load_steps=7 format=3 uid="uid://6g5nbbh4kfon"]
 
-[ext_resource type="Script" path="res://common/scene.gd" id="1_dr5rq"]
+[ext_resource type="Script" path="res://scenes/box_puzzle/box_puzzle.gd" id="1_p486h"]
 [ext_resource type="PackedScene" uid="uid://bdkhusfniyafv" path="res://scenes/box_puzzle/box.tscn" id="2_mhukg"]
 [ext_resource type="PackedScene" uid="uid://cj0hfwsj68uut" path="res://scenes/box_puzzle/wall.tscn" id="3_dbib2"]
+[ext_resource type="PackedScene" uid="uid://bigegfijoapo8" path="res://scenes/box_puzzle/box_long.tscn" id="4_p3nxr"]
+[ext_resource type="PackedScene" uid="uid://by2k5rwea6hae" path="res://scenes/box_puzzle/box_red.tscn" id="5_nb4da"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4002g"]
+size = Vector2(300, 50)
 
 [node name="BoxPuzzle" type="Node2D"]
-script = ExtResource("1_dr5rq")
+script = ExtResource("1_p486h")
 
-[node name="Box" parent="." instance=ExtResource("2_mhukg")]
-position = Vector2(273, 136)
+[node name="Field" type="Node2D" parent="."]
+position = Vector2(175, 25)
 
-[node name="Wall" parent="." instance=ExtResource("3_dbib2")]
-position = Vector2(147, 236)
+[node name="Box" parent="Field" instance=ExtResource("2_mhukg")]
+position = Vector2(175, 225)
+
+[node name="Box2" parent="Field" instance=ExtResource("2_mhukg")]
+position = Vector2(175, 175)
+
+[node name="Box3" parent="Field" instance=ExtResource("2_mhukg")]
+position = Vector2(125, 225)
+
+[node name="Box4" parent="Field" instance=ExtResource("2_mhukg")]
+position = Vector2(125, 175)
+
+[node name="BoxLong1" parent="Field" instance=ExtResource("4_p3nxr")]
+position = Vector2(225, 75)
+
+[node name="BoxLong2" parent="Field" instance=ExtResource("4_p3nxr")]
+position = Vector2(225, 175)
+
+[node name="BoxLong3" parent="Field" instance=ExtResource("4_p3nxr")]
+position = Vector2(75, 75)
+
+[node name="BoxLong4" parent="Field" instance=ExtResource("4_p3nxr")]
+position = Vector2(75, 175)
+
+[node name="Walls" type="Node2D" parent="Field"]
+
+[node name="Wall" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(25, 75)
+
+[node name="Wall2" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(25, 125)
+
+[node name="Wall3" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(25, 175)
+
+[node name="Wall4" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(25, 225)
+
+[node name="Wall5" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(25, 275)
+
+[node name="Wall8" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(25, 325)
+
+[node name="Wall19" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+modulate = Color(1, 1, 0.0784314, 1)
+position = Vector2(75, 325)
+collision_layer = 8
+
+[node name="Wall20" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+modulate = Color(1, 1, 0.0784314, 1)
+position = Vector2(125, 325)
+collision_layer = 8
+
+[node name="Wall21" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+modulate = Color(1, 1, 0.0784314, 1)
+position = Vector2(175, 325)
+collision_layer = 8
+
+[node name="Wall22" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+modulate = Color(1, 1, 0.0784314, 1)
+position = Vector2(225, 325)
+collision_layer = 8
+
+[node name="Wall6" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(25, 25)
+
+[node name="Wall7" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(75, 25)
+
+[node name="Wall9" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(125, 25)
+
+[node name="Wall10" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(175, 25)
+
+[node name="Wall11" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(225, 25)
+
+[node name="Wall12" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(275, 75)
+
+[node name="Wall13" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(275, 125)
+
+[node name="Wall14" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(275, 175)
+
+[node name="Wall15" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(275, 225)
+
+[node name="Wall16" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(275, 275)
+
+[node name="Wall18" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(275, 325)
+
+[node name="Wall17" parent="Field/Walls" instance=ExtResource("3_dbib2")]
+position = Vector2(275, 25)
+
+[node name="BoxRed" parent="Field" instance=ExtResource("5_nb4da")]
+position = Vector2(125, 75)
+
+[node name="WinArea" type="Area2D" parent="."]
+position = Vector2(327, 360)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea"]
+shape = SubResource("RectangleShape2D_4002g")
+
+[connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]

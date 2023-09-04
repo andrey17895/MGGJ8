@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bqwsupbv48ac3"]
 
 [ext_resource type="Script" path="res://scenes/cute_cat/cute_cat.gd" id="1_asikj"]
-[ext_resource type="Texture2D" uid="uid://baew4mjjl0ocs" path="res://scenes/cute_cat/assets/ready.png" id="2_d1k2n"]
-[ext_resource type="Texture2D" uid="uid://bqver8lhn6vhj" path="res://scenes/cute_cat/assets/cute.png" id="2_v4w1q"]
+[ext_resource type="Texture2D" uid="uid://xk1h4ol4elkx" path="res://scenes/cute_cat/assets/Глаза 2.png" id="2_mebvn"]
 [ext_resource type="Texture2D" uid="uid://2elhabu2047w" path="res://scenes/cute_cat/assets/gauge_background.png" id="3_faj8p"]
+[ext_resource type="Texture2D" uid="uid://c3g5xc7k7xppl" path="res://scenes/cute_cat/assets/Глаза 1.png" id="3_j01lx"]
 [ext_resource type="Texture2D" uid="uid://f56n47hojjdm" path="res://scenes/cute_cat/assets/gauge_indicator.png" id="4_4d2do"]
 [ext_resource type="PackedScene" uid="uid://c06eo3bab3n6s" path="res://common/shaky_camera.tscn" id="5_6umey"]
 [ext_resource type="AudioStream" uid="uid://crxfh5hd7kxlc" path="res://scenes/cute_cat/assets/push.wav" id="6_t0chd"]
@@ -11,11 +11,11 @@
 
 [node name="CuteCat" type="Node2D"]
 script = ExtResource("1_asikj")
-cute_cat_texture = ExtResource("2_v4w1q")
+cute_cat_texture = ExtResource("2_mebvn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(655, 310)
-texture = ExtResource("2_d1k2n")
+position = Vector2(668, 314)
+texture = ExtResource("3_j01lx")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_left = 19.0

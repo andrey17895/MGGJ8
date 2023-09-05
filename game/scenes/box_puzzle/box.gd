@@ -27,7 +27,6 @@ func drop(target_position: Vector2):
 
 
 func destroy():
-	# TODO: add animation
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2.ZERO, 1).set_trans(Tween.TRANS_EXPO)
 	tween.tween_callback(queue_free)

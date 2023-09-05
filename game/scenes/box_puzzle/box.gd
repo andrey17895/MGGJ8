@@ -24,3 +24,10 @@ func _on_area_2d_input_event(viewport:Node, event:InputEvent, shape_idx:int):
 func drop(target_position: Vector2):
 	is_picked = false
 	position = target_position
+
+
+func destroy():
+	# TODO: add animation
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2.ZERO, 1).set_trans(Tween.TRANS_EXPO)
+	tween.tween_callback(queue_free)

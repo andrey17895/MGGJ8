@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdkhusfniyafv"]
 
 [ext_resource type="Script" path="res://scenes/box_puzzle/box.gd" id="1_g3wu4"]
-[ext_resource type="Texture2D" uid="uid://d0k4y20hlkinf" path="res://scenes/box_puzzle/assets/box1-1.png" id="2_t4wui"]
+[ext_resource type="Texture2D" uid="uid://bvetxickrjg8w" path="res://scenes/box_puzzle/assets/block1-1.png" id="2_f3nj0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dyhl"]
 size = Vector2(49, 49)
@@ -10,6 +10,11 @@ size = Vector2(49, 49)
 collision_mask = 9
 script = ExtResource("1_g3wu4")
 
+[node name="Block1-1" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, -1.90735e-06)
+scale = Vector2(0.14026, 0.139535)
+texture = ExtResource("2_f3nj0")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0dyhl")
 
@@ -17,9 +22,5 @@ shape = SubResource("RectangleShape2D_0dyhl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_0dyhl")
-
-[node name="Box1-1" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("2_t4wui")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://6g5nbbh4kfon"]
+[gd_scene load_steps=8 format=3 uid="uid://6g5nbbh4kfon"]
 
 [ext_resource type="Script" path="res://scenes/box_puzzle/box_puzzle.gd" id="1_p486h"]
 [ext_resource type="PackedScene" uid="uid://bdkhusfniyafv" path="res://scenes/box_puzzle/box.tscn" id="2_mhukg"]
 [ext_resource type="PackedScene" uid="uid://cj0hfwsj68uut" path="res://scenes/box_puzzle/wall.tscn" id="3_dbib2"]
 [ext_resource type="PackedScene" uid="uid://bigegfijoapo8" path="res://scenes/box_puzzle/box_long.tscn" id="4_p3nxr"]
 [ext_resource type="PackedScene" uid="uid://by2k5rwea6hae" path="res://scenes/box_puzzle/box_red.tscn" id="5_nb4da"]
+[ext_resource type="PackedScene" uid="uid://nvehb0urxb0k" path="res://scenes/box_puzzle/box_horisontal.tscn" id="6_jqle5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4002g"]
 size = Vector2(300, 50)
@@ -15,6 +16,11 @@ script = ExtResource("1_p486h")
 [node name="Field" type="Node2D" parent="."]
 position = Vector2(275, 25)
 scale = Vector2(1.6, 1.6)
+
+[node name="BoxHorizontal" parent="Field" instance=ExtResource("6_jqle5")]
+unique_name_in_owner = true
+position = Vector2(125, 175)
+scale = Vector2(1, 1)
 
 [node name="BoxRed" parent="Field" instance=ExtResource("5_nb4da")]
 position = Vector2(125, 75)
@@ -131,4 +137,21 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Field/WinArea"]
 shape = SubResource("RectangleShape2D_4002g")
 
+[node name="HelpTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="HelpMeButton" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 850.0
+offset_top = 350.0
+offset_right = 1000.0
+offset_bottom = 400.0
+text = "Help!
+"
+
 [connection signal="body_entered" from="Field/WinArea" to="." method="_on_win_area_body_entered"]
+[connection signal="timeout" from="HelpTimer" to="." method="_on_help_timer_timeout"]
+[connection signal="pressed" from="HelpMeButton" to="." method="_on_help_me_pressed"]

@@ -1,29 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://bigegfijoapo8"]
+[gd_scene load_steps=4 format=3 uid="uid://nvehb0urxb0k"]
 
-[ext_resource type="Script" path="res://scenes/box_puzzle/box.gd" id="1_bb2y4"]
-[ext_resource type="Texture2D" uid="uid://chq1hq0y8bhgs" path="res://scenes/box_puzzle/assets/block2-1.png" id="2_2i62i"]
+[ext_resource type="Script" path="res://scenes/box_puzzle/box.gd" id="1_wfpw5"]
+[ext_resource type="Texture2D" uid="uid://cpmbipra8e87x" path="res://scenes/box_puzzle/assets/block1-2.png" id="2_4swjf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dyhl"]
-size = Vector2(49, 99)
+size = Vector2(99, 44)
 
 [node name="Box" type="CharacterBody2D" groups=["boxes"]]
 collision_layer = 5
 collision_mask = 9
-script = ExtResource("1_bb2y4")
+script = ExtResource("1_wfpw5")
 
-[node name="Block2-1" type="Sprite2D" parent="."]
-position = Vector2(-0.999999, 25.0459)
-scale = Vector2(0.142857, 0.138789)
-texture = ExtResource("2_2i62i")
+[node name="Block1-2" type="Sprite2D" parent="."]
+position = Vector2(25, 4.76837e-07)
+scale = Vector2(0.13941, 0.123393)
+texture = ExtResource("2_4swjf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 25)
+position = Vector2(25, 0)
 shape = SubResource("RectangleShape2D_0dyhl")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 25)
+position = Vector2(25, 0)
 shape = SubResource("RectangleShape2D_0dyhl")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

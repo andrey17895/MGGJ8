@@ -1,6 +1,8 @@
 extends Scene
 
 @onready var field: Node2D = $Field
+@onready var rage_piece: Box = %BoxHorizontal
+@onready var help_me_button: Button = %HelpMeButton
 
 
 var active_box: Box = null
@@ -44,3 +46,12 @@ func _end_puzzle():
     _drop_active_box()
     set_process_unhandled_input(false)
     _end_scene()
+
+
+func _on_help_me_pressed():
+    rage_piece.destroy()
+    help_me_button.visible = false
+
+
+func _on_help_timer_timeout():
+    help_me_button.visible = true

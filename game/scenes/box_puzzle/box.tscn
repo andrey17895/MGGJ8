@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdkhusfniyafv"]
+[gd_scene load_steps=5 format=3 uid="uid://bdkhusfniyafv"]
 
 [ext_resource type="Script" path="res://scenes/box_puzzle/box.gd" id="1_g3wu4"]
 [ext_resource type="Texture2D" uid="uid://bvetxickrjg8w" path="res://scenes/box_puzzle/assets/block1-1.png" id="2_f3nj0"]
+[ext_resource type="AudioStream" uid="uid://cbpm8nm7fsb6p" path="res://scenes/box_puzzle/assets/click.wav" id="3_l3uhs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dyhl"]
 size = Vector2(49, 49)
@@ -22,5 +23,8 @@ shape = SubResource("RectangleShape2D_0dyhl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_0dyhl")
+
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_l3uhs")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

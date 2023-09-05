@@ -3,6 +3,8 @@ class_name Box
 
 signal picked(box: Box)
 
+@onready var click_player: AudioStreamPlayer = $ClickPlayer
+
 var speed = 450
 
 var is_picked := false
@@ -22,6 +24,7 @@ func _on_area_2d_input_event(viewport:Node, event:InputEvent, shape_idx:int):
 
 
 func drop(target_position: Vector2):
+	click_player.play()
 	is_picked = false
 	position = target_position
 

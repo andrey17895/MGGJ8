@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://d0000av81uipe"]
 
-[ext_resource type="Script" path="res://scenes/bossfight/scenes/Enemy.gd" id="1_6f7jh"]
+[ext_resource type="Script" path="res://scenes/bossfight/scenes/enemy.gd" id="1_6f7jh"]
 [ext_resource type="PackedScene" uid="uid://6212sap2vvmx" path="res://scenes/bossfight/scenes/enemy_projectile.tscn" id="2_hltrb"]
 [ext_resource type="Script" path="res://scenes/bossfight/scenes/PatternManager.gd" id="3_3mcop"]
 [ext_resource type="AudioStream" uid="uid://cv5m88r1tkxg" path="res://scenes/bossfight/assets/Explosion7.mp3" id="3_rrbhx"]

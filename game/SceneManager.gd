@@ -31,6 +31,7 @@ func _change_scene_to(p_scene: PackedScene) -> void:
 func _on_scene_ended():
 	index += 1
 	index %= scenes.size()
+	current_scene.scene_ended.disconnect(_on_scene_ended)
 	_change_scene_to(scenes[index])
 	
 	

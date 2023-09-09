@@ -16,7 +16,8 @@ func _unhandled_input(event):
 		sprites[index].visible = false
 		comments[index].visible = false
 		index += 1
-		sprites[index].visible = true
-		comments[index].visible = true
+		if index < sprites.size():
+			sprites[index].visible = true
+			comments[index].visible = true
 	pass
 

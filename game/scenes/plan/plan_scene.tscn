@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://t5qovyis2rs1"]
+[gd_scene load_steps=10 format=3 uid="uid://t5qovyis2rs1"]
 
 [ext_resource type="Script" path="res://scenes/plan/plan_scene.gd" id="1_kh0v7"]
 [ext_resource type="Texture2D" uid="uid://dbxqc8xbk2pyl" path="res://scenes/plan/assets/cat_with_board.png" id="2_7i8tw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bcjqlx6yh4q11" path="res://scenes/plan/assets/magia.png" id="5_x71mp"]
 [ext_resource type="Texture2D" uid="uid://bx3at6rknvkvy" path="res://scenes/plan/assets/moonstick.png" id="6_dsmc2"]
 [ext_resource type="Texture2D" uid="uid://cbqtlq2vlkh3t" path="res://scenes/plan/assets/sad_cat.jpg" id="7_aimfw"]
+[ext_resource type="Texture2D" uid="uid://b0p0w4afqikvb" path="res://scenes/plan/assets/bubble.png" id="9_ow5hy"]
 
 [node name="PlanScene" type="Node2D" node_paths=PackedStringArray("sprites", "comments")]
 script = ExtResource("1_kh0v7")
@@ -20,61 +21,59 @@ scale = Vector2(0.292603, 0.292603)
 texture = ExtResource("2_7i8tw")
 
 [node name="CatHand" type="Sprite2D" parent="."]
-z_index = 200
+z_index = 10
 position = Vector2(612, 354)
 scale = Vector2(0.292603, 0.292603)
 texture = ExtResource("3_si85s")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 993.0
-offset_top = 494.0
-offset_right = 1092.0
-offset_bottom = 553.0
-text = "Next"
-
 [node name="Comments" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Comments"]
-offset_left = 673.0
-offset_top = 138.0
-offset_right = 1142.0
-offset_bottom = 183.0
+offset_left = 691.0
+offset_top = 113.0
+offset_right = 1154.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "Ordinary cat - sad, uninteresting"
+text = "Ordinary cat - sad, boring"
 
 [node name="Label2" type="Label" parent="Comments"]
 visible = false
-offset_left = 673.0
-offset_top = 138.0
-offset_right = 982.0
-offset_bottom = 183.0
+offset_left = 691.0
+offset_top = 113.0
+offset_right = 1000.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "WItch's familiar - cool"
 
 [node name="Label3" type="Label" parent="Comments"]
 visible = false
-offset_left = 673.0
-offset_top = 138.0
-offset_right = 1123.0
-offset_bottom = 183.0
+offset_left = 691.0
+offset_top = 113.0
+offset_right = 1141.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Magic girl familiar - even cooler"
 
 [node name="Label4" type="Label" parent="Comments"]
 visible = false
-offset_left = 673.0
-offset_top = 138.0
-offset_right = 832.0
-offset_bottom = 183.0
+offset_left = 691.0
+offset_top = 113.0
+offset_right = 850.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Better"
 
 [node name="Label5" type="Label" parent="Comments"]
 visible = false
-offset_left = 673.0
-offset_top = 138.0
-offset_right = 832.0
-offset_bottom = 183.0
+offset_left = 691.0
+offset_top = 113.0
+offset_right = 850.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Perfection"
 
@@ -109,4 +108,7 @@ position = Vector2(451, 286)
 scale = Vector2(0.170703, 0.170703)
 texture = ExtResource("6_dsmc2")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(928, 169)
+scale = Vector2(2.71336, 1.33657)
+texture = ExtResource("9_ow5hy")

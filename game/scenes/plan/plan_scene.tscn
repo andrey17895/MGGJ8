@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://t5qovyis2rs1"]
+
+[ext_resource type="Script" path="res://scenes/plan/plan_scene.gd" id="1_kh0v7"]
+[ext_resource type="Texture2D" uid="uid://cuxft3i2epa8l" path="res://scenes/plan/assets/cat.jpg" id="2_thp4e"]
+[ext_resource type="Texture2D" uid="uid://da33t88f4a8rn" path="res://scenes/plan/assets/familiar.jpg" id="3_kvbae"]
+[ext_resource type="Texture2D" uid="uid://c7ouctxkmrp3f" path="res://scenes/plan/assets/girl.png" id="4_whjtl"]
+[ext_resource type="Texture2D" uid="uid://bcjqlx6yh4q11" path="res://scenes/plan/assets/magia.png" id="5_x71mp"]
+[ext_resource type="Texture2D" uid="uid://bx3at6rknvkvy" path="res://scenes/plan/assets/moonstick.png" id="6_dsmc2"]
+[ext_resource type="Texture2D" uid="uid://cbqtlq2vlkh3t" path="res://scenes/plan/assets/sad_cat.jpg" id="7_aimfw"]
+
+[node name="PlanScene" type="Node2D"]
+script = ExtResource("1_kh0v7")
+
+[node name="Cat" type="Sprite2D" parent="."]
+position = Vector2(616, 357)
+scale = Vector2(0.292603, 0.292603)
+texture = ExtResource("2_thp4e")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 975.0
+offset_top = 393.0
+offset_right = 1134.0
+offset_bottom = 419.0
+text = "Cat explains his plan"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 993.0
+offset_top = 494.0
+offset_right = 1092.0
+offset_bottom = 553.0
+text = "Next"
+
+[node name="Familiar" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(449, 286)
+scale = Vector2(0.314961, 0.31496)
+texture = ExtResource("3_kvbae")
+
+[node name="Girl" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(456, 284)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("4_whjtl")
+
+[node name="Magia" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(447, 280)
+scale = Vector2(0.272222, 0.272222)
+texture = ExtResource("5_x71mp")
+
+[node name="Moonstick" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(451, 286)
+scale = Vector2(0.170703, 0.170703)
+texture = ExtResource("6_dsmc2")
+
+[node name="SadCat" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(449, 284)
+scale = Vector2(0.571078, 0.571078)
+texture = ExtResource("7_aimfw")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

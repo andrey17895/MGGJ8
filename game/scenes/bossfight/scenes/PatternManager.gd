@@ -6,18 +6,23 @@ signal pattern_switched(pattern: ShootPattern)
 
 enum AttackType { SINGLE, ROW, FAN, CIRCLE }
 
-var attack_type_array: Array[ShootPattern] 
+@export var attack_type_array: Array[ShootPattern] = []
 var current_pattern: ShootPattern
 var attack_type_index = 0
 
 @onready var patterns: Node = $Patterns
 
 func _ready() -> void:
-	for node in patterns.get_children():
-		if node is ShootPattern:
-			var pattern = node as ShootPattern
-			attack_type_array.append(pattern)
-			pattern.shoot.connect(_on_pattern_shoot)
+	if attack_type_array.size() == 0:
+		for node in patterns.get_children():
+			if node is ShootPattern:
+				var pattern = node as ShootPattern
+				attack_type_array.append(pattern)
+
+	assert(attack_type_array.size() > 0, "Add elements to attack_type_array")
+
+	for pattern in attack_type_array:
+		pattern.shoot.connect(_on_pattern_shoot)
 	
 	
 func _on_pattern_shoot(direction: Vector2) -> void:

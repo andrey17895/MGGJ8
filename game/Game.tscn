@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cqw4t08jpknsb"]
+[gd_scene load_steps=21 format=3 uid="uid://cqw4t08jpknsb"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_fbdgx"]
 [ext_resource type="PackedScene" uid="uid://cien2k5m1a475" path="res://common/scene_manager.tscn" id="2_p1t8s"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bcvy3bda6dlgo" path="res://scenes/dialogue/prologue/prologue.tscn" id="4_0hg3l"]
 [ext_resource type="PackedScene" uid="uid://6g5nbbh4kfon" path="res://scenes/box_puzzle/box_puzzle.tscn" id="4_423c3"]
 [ext_resource type="Texture2D" uid="uid://bwar1e2vqc72" path="res://assets/volume.png" id="5_gm6x6"]
-[ext_resource type="PackedScene" uid="uid://bqwsupbv48ac3" path="res://scenes/cute_cat/cute_cat.tscn" id="5_twmaj"]
+[ext_resource type="PackedScene" uid="uid://b1n7gog148j61" path="res://scenes/cute_cat/cute_cat.tscn" id="5_twmaj"]
 [ext_resource type="Script" path="res://common/VolumeControl.gd" id="5_vmxr6"]
 [ext_resource type="PackedScene" uid="uid://t5qovyis2rs1" path="res://scenes/plan/plan_scene.tscn" id="5_xosgs"]
 [ext_resource type="Texture2D" uid="uid://b5vcfwd437dyp" path="res://assets/no_volume.png" id="6_0nbcl"]
@@ -19,12 +19,13 @@
 [ext_resource type="PackedScene" uid="uid://5m0s58eq0uie" path="res://scenes/dialogue/dialogue5/dialogue5.tscn" id="11_bvpuj"]
 [ext_resource type="PackedScene" uid="uid://dyyax7jc08btw" path="res://scenes/dialogue/dialogue6/dialogue6.tscn" id="13_5msmn"]
 [ext_resource type="PackedScene" uid="uid://ctkdu1xnot0qx" path="res://scenes/dialogue/dialogue7/dialogue7.tscn" id="15_dflkq"]
+[ext_resource type="PackedScene" uid="uid://8753512ot6xl" path="res://scenes/bossfight/bossfight2.tscn" id="16_7l480"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_fbdgx")
 
 [node name="SceneManager" parent="." instance=ExtResource("2_p1t8s")]
-scenes = Array[PackedScene]([ExtResource("3_vg7k7"), ExtResource("4_0hg3l"), ExtResource("5_xosgs"), ExtResource("6_ndof1"), ExtResource("5_twmaj"), ExtResource("8_7hm3p"), ExtResource("7_2mljv"), ExtResource("10_3jto8"), ExtResource("11_bvpuj"), ExtResource("4_423c3"), ExtResource("13_5msmn"), ExtResource("6_md2ti"), ExtResource("15_dflkq"), ExtResource("8_a8wrf")])
+scenes = Array[PackedScene]([ExtResource("3_vg7k7"), ExtResource("4_0hg3l"), ExtResource("5_xosgs"), ExtResource("6_ndof1"), ExtResource("5_twmaj"), ExtResource("8_7hm3p"), ExtResource("7_2mljv"), ExtResource("10_3jto8"), ExtResource("11_bvpuj"), ExtResource("4_423c3"), ExtResource("13_5msmn"), ExtResource("6_md2ti"), ExtResource("5_twmaj"), ExtResource("16_7l480"), ExtResource("15_dflkq"), ExtResource("8_a8wrf")])
 
 [node name="PauseMenu" type="Control" parent="."]
 process_mode = 2

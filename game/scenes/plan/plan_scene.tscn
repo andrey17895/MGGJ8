@@ -1,27 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://t5qovyis2rs1"]
+[gd_scene load_steps=9 format=3 uid="uid://t5qovyis2rs1"]
 
 [ext_resource type="Script" path="res://scenes/plan/plan_scene.gd" id="1_kh0v7"]
-[ext_resource type="Texture2D" uid="uid://cuxft3i2epa8l" path="res://scenes/plan/assets/cat.jpg" id="2_thp4e"]
+[ext_resource type="Texture2D" uid="uid://dbxqc8xbk2pyl" path="res://scenes/plan/assets/cat_with_board.png" id="2_7i8tw"]
 [ext_resource type="Texture2D" uid="uid://da33t88f4a8rn" path="res://scenes/plan/assets/familiar.jpg" id="3_kvbae"]
+[ext_resource type="Texture2D" uid="uid://bbs4d00ssyhda" path="res://scenes/plan/assets/cat_hand.png" id="3_si85s"]
 [ext_resource type="Texture2D" uid="uid://c7ouctxkmrp3f" path="res://scenes/plan/assets/girl.png" id="4_whjtl"]
 [ext_resource type="Texture2D" uid="uid://bcjqlx6yh4q11" path="res://scenes/plan/assets/magia.png" id="5_x71mp"]
 [ext_resource type="Texture2D" uid="uid://bx3at6rknvkvy" path="res://scenes/plan/assets/moonstick.png" id="6_dsmc2"]
 [ext_resource type="Texture2D" uid="uid://cbqtlq2vlkh3t" path="res://scenes/plan/assets/sad_cat.jpg" id="7_aimfw"]
 
-[node name="PlanScene" type="Node2D"]
+[node name="PlanScene" type="Node2D" node_paths=PackedStringArray("sprites", "comments")]
 script = ExtResource("1_kh0v7")
+sprites = [NodePath("Sprites/SadCat"), NodePath("Sprites/Familiar"), NodePath("Sprites/Girl"), NodePath("Sprites/Magia"), NodePath("Sprites/Moonstick")]
+comments = [NodePath("Comments/Label"), NodePath("Comments/Label2"), NodePath("Comments/Label3"), NodePath("Comments/Label4"), NodePath("Comments/Label5")]
 
 [node name="Cat" type="Sprite2D" parent="."]
-position = Vector2(616, 357)
+position = Vector2(612, 354)
 scale = Vector2(0.292603, 0.292603)
-texture = ExtResource("2_thp4e")
+texture = ExtResource("2_7i8tw")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 975.0
-offset_top = 393.0
-offset_right = 1134.0
-offset_bottom = 419.0
-text = "Cat explains his plan"
+[node name="CatHand" type="Sprite2D" parent="."]
+z_index = 200
+position = Vector2(612, 354)
+scale = Vector2(0.292603, 0.292603)
+texture = ExtResource("3_si85s")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 993.0
@@ -30,34 +32,81 @@ offset_right = 1092.0
 offset_bottom = 553.0
 text = "Next"
 
-[node name="Familiar" type="Sprite2D" parent="."]
+[node name="Comments" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Comments"]
+offset_left = 673.0
+offset_top = 138.0
+offset_right = 1142.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 30
+text = "Ordinary cat - sad, uninteresting"
+
+[node name="Label2" type="Label" parent="Comments"]
+visible = false
+offset_left = 673.0
+offset_top = 138.0
+offset_right = 982.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 30
+text = "WItch's familiar - cool"
+
+[node name="Label3" type="Label" parent="Comments"]
+visible = false
+offset_left = 673.0
+offset_top = 138.0
+offset_right = 1123.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 30
+text = "Magic girl familiar - even cooler"
+
+[node name="Label4" type="Label" parent="Comments"]
+visible = false
+offset_left = 673.0
+offset_top = 138.0
+offset_right = 832.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 30
+text = "Better"
+
+[node name="Label5" type="Label" parent="Comments"]
+visible = false
+offset_left = 673.0
+offset_top = 138.0
+offset_right = 832.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 30
+text = "Perfection"
+
+[node name="Sprites" type="Node" parent="."]
+
+[node name="SadCat" type="Sprite2D" parent="Sprites"]
+position = Vector2(449, 284)
+scale = Vector2(0.571078, 0.571078)
+texture = ExtResource("7_aimfw")
+
+[node name="Familiar" type="Sprite2D" parent="Sprites"]
 visible = false
 position = Vector2(449, 286)
 scale = Vector2(0.314961, 0.31496)
 texture = ExtResource("3_kvbae")
 
-[node name="Girl" type="Sprite2D" parent="."]
+[node name="Girl" type="Sprite2D" parent="Sprites"]
 visible = false
 position = Vector2(456, 284)
 scale = Vector2(0.39, 0.39)
 texture = ExtResource("4_whjtl")
 
-[node name="Magia" type="Sprite2D" parent="."]
+[node name="Magia" type="Sprite2D" parent="Sprites"]
 visible = false
 position = Vector2(447, 280)
 scale = Vector2(0.272222, 0.272222)
 texture = ExtResource("5_x71mp")
 
-[node name="Moonstick" type="Sprite2D" parent="."]
+[node name="Moonstick" type="Sprite2D" parent="Sprites"]
 visible = false
 position = Vector2(451, 286)
 scale = Vector2(0.170703, 0.170703)
 texture = ExtResource("6_dsmc2")
-
-[node name="SadCat" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(449, 284)
-scale = Vector2(0.571078, 0.571078)
-texture = ExtResource("7_aimfw")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

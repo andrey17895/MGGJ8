@@ -2,7 +2,7 @@ extends ShootPattern
 class_name CircularShootPattern
 
 var direction := Vector2.LEFT
-var angle = deg_to_rad(15)
+var angle = deg_to_rad(14)
 
 func _shoot_pattern(_shooter: Vector2, _target: Vector2) -> void:
 	_shoot(direction)

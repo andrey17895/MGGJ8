@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://8753512ot6xl"]
+
+[ext_resource type="PackedScene" uid="uid://bwgiy4ofxr38s" path="res://scenes/bossfight/Bossfight.tscn" id="1_okewx"]
+
+[node name="Bossfight" instance=ExtResource("1_okewx")]
+
+[node name="PatternManager" parent="Enemy" index="7" node_paths=PackedStringArray("attack_type_array")]
+attack_type_array = [NodePath("Patterns/Circular"), NodePath("Patterns/Fan")]
+
+[editable path="Enemy"]

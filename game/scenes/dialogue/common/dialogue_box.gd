@@ -1,6 +1,8 @@
 extends Node2D
 class_name DialogueBox
 
+@export var typing: bool = false
+
 @onready var name_label: Label = %Name
 @onready var text_label: Label = %Text
 @onready var typing_timer: Timer = %TypingTimer
@@ -28,9 +30,12 @@ func draw_dialogue_line(line: DialogueLine) -> void:
 		name_label.text = line.name
 		text_label.text = line.line
 		line_length = text_label.text.length()
-		text_label.visible_characters = 1
-		is_typing = true
-		typing_timer.start()
+		if typing:
+			text_label.visible_characters = 1
+			is_typing = true
+			typing_timer.start()
+		else:
+			skip_typing()
 
 
 func _on_typing_timer_timeout():

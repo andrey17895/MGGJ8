@@ -3,6 +3,7 @@ class_name Character
 
 @export var polygon: Polygon2D
 @export var max_health: float = 100
+@export var start_health: float = 100
 @export var collision: CollisionShape2D
 
 @onready var original_color = polygon.color
@@ -22,6 +23,9 @@ var is_alive = true
 
 signal health_changed(percent: float)
 signal character_killed
+
+func _ready():
+	self.health = start_health
 
 func hit(damage: int) -> void:
 	self.health -= damage

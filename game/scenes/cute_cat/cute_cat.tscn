@@ -1,17 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqwsupbv48ac3"]
+[gd_scene load_steps=9 format=3 uid="uid://b1n7gog148j61"]
 
-[ext_resource type="Script" path="res://scenes/cute_cat/cute_cat.gd" id="1_asikj"]
-[ext_resource type="Texture2D" uid="uid://xk1h4ol4elkx" path="res://scenes/cute_cat/assets/Глаза 2.png" id="2_mebvn"]
-[ext_resource type="Texture2D" uid="uid://2elhabu2047w" path="res://scenes/cute_cat/assets/gauge_background.png" id="3_faj8p"]
-[ext_resource type="Texture2D" uid="uid://c3g5xc7k7xppl" path="res://scenes/cute_cat/assets/Глаза 1.png" id="3_j01lx"]
-[ext_resource type="Texture2D" uid="uid://f56n47hojjdm" path="res://scenes/cute_cat/assets/gauge_indicator.png" id="4_4d2do"]
-[ext_resource type="PackedScene" uid="uid://c06eo3bab3n6s" path="res://common/shaky_camera.tscn" id="5_6umey"]
-[ext_resource type="AudioStream" uid="uid://crxfh5hd7kxlc" path="res://scenes/cute_cat/assets/push.wav" id="6_t0chd"]
-[ext_resource type="AudioStream" uid="uid://dtijrgmy30ryw" path="res://scenes/cute_cat/assets/wow.mp3" id="7_cbsms"]
+[ext_resource type="Script" path="res://scenes/cute_cat/cute_cat.gd" id="1_rsnio"]
+[ext_resource type="Texture2D" uid="uid://xk1h4ol4elkx" path="res://scenes/cute_cat/assets/Глаза 2.png" id="2_8wbnx"]
+[ext_resource type="Texture2D" uid="uid://c3g5xc7k7xppl" path="res://scenes/cute_cat/assets/Глаза 1.png" id="3_033g3"]
+[ext_resource type="Texture2D" uid="uid://2elhabu2047w" path="res://scenes/cute_cat/assets/gauge_background.png" id="4_qy2lh"]
+[ext_resource type="Texture2D" uid="uid://be4hw2xwax7pk" path="res://scenes/cute_cat/assets/gauge_indicator_fixed.png" id="5_ara1s"]
+[ext_resource type="PackedScene" uid="uid://c06eo3bab3n6s" path="res://common/shaky_camera.tscn" id="6_xea0u"]
+[ext_resource type="AudioStream" uid="uid://crxfh5hd7kxlc" path="res://scenes/cute_cat/assets/push.wav" id="7_yr0ua"]
+[ext_resource type="AudioStream" uid="uid://dtijrgmy30ryw" path="res://scenes/cute_cat/assets/wow.mp3" id="8_yhan3"]
 
 [node name="CuteCat" type="Node2D"]
-script = ExtResource("1_asikj")
-cute_cat_texture = ExtResource("2_mebvn")
+script = ExtResource("1_rsnio")
+cute_cat_texture = ExtResource("2_8wbnx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1174.0
@@ -22,7 +22,7 @@ mouse_filter = 2
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(591, 323)
 scale = Vector2(0.80212, 0.80212)
-texture = ExtResource("3_j01lx")
+texture = ExtResource("3_033g3")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_left = 19.0
@@ -31,22 +31,23 @@ offset_right = 219.0
 offset_bottom = 559.0
 step = 0.1
 fill_mode = 3
-texture_under = ExtResource("3_faj8p")
-texture_progress = ExtResource("4_4d2do")
+texture_under = ExtResource("4_qy2lh")
+texture_progress = ExtResource("5_ara1s")
+texture_progress_offset = Vector2(35, 30)
 
 [node name="ChillTimer" type="Timer" parent="."]
 wait_time = 0.05
 autostart = true
 
-[node name="Camera2D" parent="." instance=ExtResource("5_6umey")]
+[node name="Camera2D" parent="." instance=ExtResource("6_xea0u")]
 anchor_mode = 0
 
 [node name="PushSfx" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_t0chd")
+stream = ExtResource("7_yr0ua")
 
 [node name="WinSfx" type="AudioStreamPlayer2D" parent="."]
 modulate = Color(1, 0, 1, 1)
-stream = ExtResource("7_cbsms")
+stream = ExtResource("8_yhan3")
 
 [node name="NextButton" type="Button" parent="."]
 visible = false

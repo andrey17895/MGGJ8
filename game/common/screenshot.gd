@@ -6,4 +6,4 @@ func _ready():
 func _input(event):
     if event.is_action_pressed("screenshot"):
         print("screenshot taken")
-        get_viewport().get_texture().get_image().save_png("user://screenshot_" + str(Time.get_ticks_msec()) + ".png")
+        get_viewport().get_texture().get_image().save_png("user://screenshot_" + str(Time.get_unix_time_from_system()) + ".png")

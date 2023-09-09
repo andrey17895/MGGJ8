@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bauabj7wiwe7f"]
 
-[ext_resource type="Script" path="res://scenes/dialogue/test/test_dialogue.gd" id="1_w8ny4"]
+[ext_resource type="Script" path="res://scenes/dialogue/dialugue.gd" id="1_4rsmg"]
 [ext_resource type="PackedScene" uid="uid://eobtqry0jeb5" path="res://scenes/dialogue/common/dialogue_manager.tscn" id="4_cjms3"]
 
 [node name="test_dialogue" type="Node2D"]
-script = ExtResource("1_w8ny4")
+script = ExtResource("1_4rsmg")
 
 [node name="DialogueManager" parent="." instance=ExtResource("4_cjms3")]
 file_path = "res://scenes/dialogue/common/dialogue.json"

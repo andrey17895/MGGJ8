@@ -1,0 +1,64 @@
+[
+	{
+		 "position": "right",
+		 "name": "Lisa",
+		 "line": "Marcus, you're watching anime so much (and so loud) in my flat that I feel like a character of Shojo too."
+	 },
+	{
+		 "position": "right",
+		 "name": "Lisa",
+		 "line": "How about take a walk, do something cool outside instead of sitting all day home in front of the TV?"
+	 },
+	 {
+		 "position": "left",
+		 "name": "Marcus",
+		 "line": "I thought this what you humans do."
+	 },
+	 {
+		 "position": "right",
+		 "name": "Lisa",
+		 "line": "So what are your plans?"
+	 },
+	 {
+		 "position": "left",
+		 "name": "Marcus",
+		 "line": "Actually I have one! How about saving the world?"
+	 },
+	 {
+		 "position": "right",
+		 "name": "Lisa",
+		 "line": "...the what?"
+	 },    {
+		 "position": "left",
+		 "name": "Marcus",
+		 "line": "Let me explain. I've watched enough documentaries..."
+	 },
+	 {
+		 "position": "right",
+		 "name": "Lisa",
+		 "line": "Animes"
+	 },
+	 {
+		 "position": "left",
+		 "name": "Marcus",
+		 "line": "Yeah, whatever. "
+	 },
+	 {
+		 "position": "left",
+		 "name": "Marcus",
+		 "line": "So you can become a magical girl! Imagine, saving the world, flying in sparkles!!!"
+	 },    {
+		 "position": "left",
+		 "name": "Marcus",
+		 "line": "And I'll be a proud humble familiar by your side. "
+	 },
+	 {
+		 "position": "right",
+		 "name": "Lisa",
+		 "line": "..."
+	 },    {
+		 "position": "left",
+		 "name": "Marcus",
+		 "line": "Let me explain you!"
+	 }
+ ]

@@ -35,7 +35,8 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "Text"
+text = "asdjghsidfb dfskjnbsdfhbsjhdbogfoifjgsdfhh kdfjg roirgj dfkgjdsfgfd gskldfj sofdj"
+autowrap_mode = 2
 
 [node name="TypingTimer" type="Timer" parent="."]
 unique_name_in_owner = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwgiy4ofxr38s"]
+[gd_scene load_steps=9 format=3 uid="uid://bwgiy4ofxr38s"]
 
 [ext_resource type="Script" path="res://scenes/bossfight/Bossfight.gd" id="1_b4qb8"]
 [ext_resource type="PackedScene" uid="uid://bn76kffvb2a7x" path="res://scenes/bossfight/scenes/Player.tscn" id="2_2t3g0"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b80qes4poacha" path="res://scenes/bossfight/assets/bg_0.png" id="5_885fm"]
 [ext_resource type="Texture2D" uid="uid://cslefevdd81s0" path="res://scenes/bossfight/assets/bg_1.png" id="6_opjsc"]
 [ext_resource type="Texture2D" uid="uid://cq4vsbhjs5wfm" path="res://scenes/bossfight/assets/bg_2.png" id="7_0lav8"]
+
+[sub_resource type="Environment" id="Environment_16q5v"]
 
 [node name="Bossfight" type="Node2D"]
 script = ExtResource("1_b4qb8")
@@ -69,6 +71,9 @@ centered = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="ParallaxBackground"]
 color = Color(0.301961, 0.301961, 0.301961, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_16q5v")
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
 [connection signal="character_killed" from="Player" to="." method="_on_player_character_killed"]

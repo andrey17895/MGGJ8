@@ -25,10 +25,10 @@ tracks/1/path = NodePath("Camera2D:zoom")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(6, 6.5, 9),
-"transitions": PackedFloat32Array(-2, -2, -2),
+"times": PackedFloat32Array(6, 6.5, 9, 12),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.45, 0.45)]
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.45, 0.45), Vector2(0.45, 0.45)]
 }
 
 [sub_resource type="Animation" id="Animation_588e4"]

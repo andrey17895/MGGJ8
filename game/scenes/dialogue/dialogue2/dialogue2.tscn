@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6068m1xfwvqk"]
+[gd_scene load_steps=4 format=3 uid="uid://b6068m1xfwvqk"]
 
 [ext_resource type="Script" path="res://scenes/dialogue/dialugue.gd" id="1_d0vi2"]
+[ext_resource type="Texture2D" uid="uid://u5nhxyw48bky" path="res://scenes/dialogue/common/assets/background1.png" id="2_g0ha6"]
 [ext_resource type="PackedScene" uid="uid://eobtqry0jeb5" path="res://scenes/dialogue/common/dialogue_manager.tscn" id="2_mss1c"]
 
 [node name="test_dialogue" type="Node2D"]
@@ -13,6 +14,11 @@ offset_right = 695.0
 offset_bottom = 252.0
 theme_override_font_sizes/font_size = 80
 text = "Фон1"
+
+[node name="Background1" type="Sprite2D" parent="."]
+position = Vector2(570, 432)
+scale = Vector2(0.459625, 0.459625)
+texture = ExtResource("2_g0ha6")
 
 [node name="DialogueManager" parent="." instance=ExtResource("2_mss1c")]
 file_path = "res://scenes/dialogue/dialogue2/dialogue2.json"

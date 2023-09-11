@@ -26,7 +26,7 @@
 script = ExtResource("1_fbdgx")
 
 [node name="SceneManager" parent="." instance=ExtResource("2_p1t8s")]
-scenes = Array[PackedScene]([ExtResource("3_vg7k7"), ExtResource("4_0hg3l"), ExtResource("5_xosgs"), ExtResource("6_ndof1"), ExtResource("5_twmaj"), ExtResource("8_7hm3p"), ExtResource("7_2mljv"), ExtResource("10_3jto8"), ExtResource("11_bvpuj"), ExtResource("4_423c3"), ExtResource("13_5msmn"), ExtResource("14_84a8c"), ExtResource("6_md2ti"), ExtResource("5_twmaj"), ExtResource("16_7l480"), ExtResource("15_dflkq"), ExtResource("8_a8wrf")])
+scenes = Array[PackedScene]([ExtResource("3_vg7k7"), ExtResource("4_0hg3l"), ExtResource("5_xosgs"), ExtResource("6_ndof1"), ExtResource("5_twmaj"), ExtResource("7_2mljv"), ExtResource("8_7hm3p"), ExtResource("7_2mljv"), ExtResource("10_3jto8"), ExtResource("11_bvpuj"), ExtResource("4_423c3"), ExtResource("13_5msmn"), ExtResource("7_2mljv"), ExtResource("14_84a8c"), ExtResource("6_md2ti"), ExtResource("5_twmaj"), ExtResource("16_7l480"), ExtResource("15_dflkq"), ExtResource("8_a8wrf")])
 
 [node name="PauseMenu" type="Control" parent="."]
 process_mode = 2

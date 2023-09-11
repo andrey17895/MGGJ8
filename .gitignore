@@ -4,6 +4,8 @@
 # VSCode
 .vscode/
 
+build/
+
 # Godot-specific ignores
 .import/
 export.cfg

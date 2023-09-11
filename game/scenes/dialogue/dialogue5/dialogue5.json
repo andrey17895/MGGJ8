@@ -7,7 +7,7 @@
     {
         "position": "left",
         "name": "Marcus",
-        "line": "I want to buy... Do you have any artefacts?"
+        "line": "I want to buy... Do you have magic artefacts?"
     },
     {
         "position": "left",
@@ -27,17 +27,17 @@
     {
         "position": "right",
         "name": "Shopkeeper",
-        "line": "Sure. Over there. It's on sale now"
+        "line": "I have a wand. Over there. It's on sale now"
     },
     {
         "position": "left",
         "name": "Marcus",
-        "line": "Oh, it costs a lot!"
+        "line": "Oh, it costs a fortune!"
     },
     {
         "position": "left",
         "name": "Marcus",
-        "line": "At least humans can have as much money as they want, aren't they?"
+        "line": "At least humans have those thigs called credit cards."
     },
     {
         "position": "left",

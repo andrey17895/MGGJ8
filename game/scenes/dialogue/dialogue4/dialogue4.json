@@ -7,7 +7,7 @@
     {
         "position": "right",
         "name": "Lisa",
-        "line": "I won't wear all those sparkles. I still hope they will wash off."
+        "line": "I won't wear all those sparkles. I just hope they will wash off."
     },
     {
         "position": "left",
@@ -22,6 +22,11 @@
     {
         "position": "right",
         "name": "Lisa",
-        "line": "Sure! Wait... I hope this wasn't my wallet in his hands."
+        "line": "Sure..."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "Wait! Where is my wallet?!"
     }
 ]

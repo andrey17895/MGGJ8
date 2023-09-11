@@ -2,11 +2,41 @@
     {
         "position": "right",
         "name": "Lisa",
-        "line": "bla-bla-bla"
+        "line": "That is a glittery mess."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "When did you even manage to do all of this."
     },
     {
         "position": "left",
         "name": "Marcus",
-        "line": "bla-bla-bla"
+        "line": "Lets say I have my own ways..."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Dont think about it. Lets focus on important staff."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "All of my clothes is ruined!"
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "Why have you done it?!"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "I'll explain everything on the way to a shop."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "Whatever. I just don't wanna see all this."
     }
 ]

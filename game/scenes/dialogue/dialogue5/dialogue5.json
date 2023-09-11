@@ -1,12 +1,52 @@
 [
     {
         "position": "right",
-        "name": "Lisa",
-        "line": "bla-bla-bla"
+        "name": "Shopkeeper",
+        "line": "What can I do for you, young lad?"
     },
     {
         "position": "left",
         "name": "Marcus",
-        "line": "bla-bla-bla"
+        "line": "I want to buy... Do you have any artefacts?"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Magic potions?"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Hmm... flying broom maybe?"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Magic wand?"
+    },
+    {
+        "position": "right",
+        "name": "Shopkeeper",
+        "line": "Sure. Over there. It's on sale now"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Oh, it costs a lot!"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "At least humans can have as much money as they want, aren't they?"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "I'll take it!"
+    },
+    {
+        "position": "right",
+        "name": "Shopkeeper",
+        "line": "Yup. But my back is too old to climb there. Take it."
     }
 ]

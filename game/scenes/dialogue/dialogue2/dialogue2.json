@@ -1,12 +1,32 @@
 [
-    {
-        "position": "right",
-        "name": "Lisa",
-        "line": "bla-bla-bla"
-    },
-    {
-        "position": "left",
-        "name": "Marcus",
-        "line": "bla-bla-bla"
-    }
+	{
+		"position": "right",
+		"name": "Lisa",
+		"line": "I didn't know we had this board."
+	},
+	{
+		"position": "left",
+		"name": "Marcus",
+		"line": "Look! The plan is flawless!"
+	},
+	{
+		"position": "left",
+		"name": "Marcus",
+		"line": "And... You suggested to go out anyway."
+	},
+	{
+		"position": "right",
+		"name": "Lisa",
+		"line": "No way!"
+	},
+	{
+		"position": "left",
+		"name": "Marcus",
+		"line": "Pleeeeease? Let's have an adventure together!"
+	},
+	{
+		"position": "left",
+		"name": "Marcus",
+		"line": "PLEEEEEEASE!"
+	}
 ]

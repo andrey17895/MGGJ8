@@ -2,11 +2,76 @@
     {
         "position": "right",
         "name": "Lisa",
-        "line": "bla-bla-bla"
+        "line": "*sobbing*"
     },
     {
         "position": "left",
         "name": "Marcus",
-        "line": "bla-bla-bla"
+        "line": "Here, here. It's over now. No bad monsters, magic and fears."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "I need to tell you, something."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "You are the magic girl now!"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Yeah. But that doesn't matter. I need to tell you..."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "I'm very sorry"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "I promise, I'll support your hobbies and interests too now."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Even if my dreams won't come true..."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "But you ARE a magic girl now! You got that transformation and powers."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "So you can do all your saving the world and adventures things!"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Can I? I'm not even a girl, I'm a cat."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "Why not? If anyone asks, we'll tell you are a neko-girl."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Thank you!!!"
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "Let's go home, kitten. "
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "...and you'll tell me about all your hobbies. Ok?"
     }
 ]

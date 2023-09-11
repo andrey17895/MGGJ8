@@ -1,12 +1,37 @@
 [
     {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Here is The Wand! Now it's time for trainings. "
+    },
+    {
         "position": "right",
         "name": "Lisa",
-        "line": "bla-bla-bla"
+        "line": "I see you've prepared everything."
     },
     {
         "position": "left",
         "name": "Marcus",
-        "line": "bla-bla-bla"
+        "line": "Yeah. It's all for me becoming..."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "I mean YOU becoming magical."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Let's go to the forest and test it!"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Maybe we'll even find some monsters!"
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "We shouldn't stay there for long, it will be dark soon."
     }
 ]

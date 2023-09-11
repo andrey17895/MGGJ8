@@ -1,12 +1,27 @@
 [
     {
+        "position": "left",
+        "name": "Marcus",
+        "line": "To become a magic girl one needs an outfit and a wand!"
+    },
+    {
         "position": "right",
         "name": "Lisa",
-        "line": "bla-bla-bla"
+        "line": "I won't wear all those sparkles. I still hope they will wash off."
     },
     {
         "position": "left",
         "name": "Marcus",
-        "line": "bla-bla-bla"
+        "line": "Just a wand then? Ok, this still works."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Wait for me, I'll buy it!"
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "Sure! Wait... I hope this wasn't my wallet in his hands."
     }
 ]

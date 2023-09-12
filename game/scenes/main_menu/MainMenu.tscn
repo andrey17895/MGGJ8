@@ -14,7 +14,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_pakt6")
 
 [node name="Particles" type="CPUParticles2D" parent="."]
-position = Vector2(856, 394)
+position = Vector2(796, 260)
 emitting = false
 amount = 10
 lifetime = 2.0

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/dialogue/dialugue.gd" id="1_6mtah"]
 [ext_resource type="PackedScene" uid="uid://eobtqry0jeb5" path="res://scenes/dialogue/common/dialogue_manager.tscn" id="2_a557w"]
-[ext_resource type="Texture2D" uid="uid://u5nhxyw48bky" path="res://scenes/dialogue/common/assets/background1.png" id="2_w2lb5"]
+[ext_resource type="Texture2D" uid="uid://cwb15kmlcsa8h" path="res://scenes/dialogue/common/assets/back1.jpg" id="2_skafh"]
 
 [node name="test_dialogue" type="Node2D"]
 script = ExtResource("1_6mtah")
@@ -16,9 +16,9 @@ theme_override_font_sizes/font_size = 80
 text = "Фон1"
 
 [node name="Background1" type="Sprite2D" parent="."]
-position = Vector2(570, 432)
-scale = Vector2(0.459625, 0.459625)
-texture = ExtResource("2_w2lb5")
+position = Vector2(576.921, 404.756)
+scale = Vector2(0.55625, 0.55625)
+texture = ExtResource("2_skafh")
 
 [node name="DialogueManager" parent="." instance=ExtResource("2_a557w")]
 file_path = "res://scenes/dialogue/prologue/prologue.json"

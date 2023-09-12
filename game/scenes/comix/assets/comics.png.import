@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blvt5n4yehhr"
-path="res://.godot/imported/Shopkeeper_default.png-269ad7940dc131e6e09e07559973e192.ctex"
+uid="uid://biivoibkgyoi6"
+path="res://.godot/imported/comics.png-5100d41ca92aaf9d105c906300faf5b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/dialogue/characters/Shopkeeper_default.png"
-dest_files=["res://.godot/imported/Shopkeeper_default.png-269ad7940dc131e6e09e07559973e192.ctex"]
+source_file="res://scenes/comix/assets/comics.png"
+dest_files=["res://.godot/imported/comics.png-5100d41ca92aaf9d105c906300faf5b8.ctex"]
 
 [params]
 

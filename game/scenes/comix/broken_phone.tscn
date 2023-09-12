@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b21proki7vqhq"]
+[gd_scene load_steps=7 format=3 uid="uid://b21proki7vqhq"]
 
 [ext_resource type="Script" path="res://scenes/comix/broken_phone.gd" id="1_1c27b"]
 [ext_resource type="Texture2D" uid="uid://birjqksv14aqb" path="res://scenes/comix/assets/broken_phone.png" id="1_ujm2h"]
+[ext_resource type="Texture2D" uid="uid://biivoibkgyoi6" path="res://scenes/comix/assets/comics.png" id="3_tmfve"]
 
 [sub_resource type="Animation" id="Animation_588e4"]
 length = 0.001
@@ -68,6 +69,7 @@ _data = {
 script = ExtResource("1_1c27b")
 
 [node name="BrokenPhone" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(560, 328)
 scale = Vector2(0.332021, 0.332021)
 texture = ExtResource("1_ujm2h")
@@ -79,3 +81,8 @@ position = Vector2(347, -385)
 libraries = {
 "": SubResource("AnimationLibrary_sr48d")
 }
+
+[node name="Comics" type="Sprite2D" parent="."]
+position = Vector2(573.091, 328.375)
+scale = Vector2(0.3931, 0.368207)
+texture = ExtResource("3_tmfve")

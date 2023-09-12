@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://6g5nbbh4kfon"]
+[gd_scene load_steps=13 format=3 uid="uid://6g5nbbh4kfon"]
 
 [ext_resource type="Script" path="res://scenes/box_puzzle/box_puzzle.gd" id="1_p486h"]
 [ext_resource type="PackedScene" uid="uid://bdkhusfniyafv" path="res://scenes/box_puzzle/box.tscn" id="2_mhukg"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://by2k5rwea6hae" path="res://scenes/box_puzzle/box_red.tscn" id="5_nb4da"]
 [ext_resource type="PackedScene" uid="uid://nvehb0urxb0k" path="res://scenes/box_puzzle/box_horisontal.tscn" id="6_jqle5"]
 [ext_resource type="Texture2D" uid="uid://cu4f5r4rsa0p2" path="res://scenes/box_puzzle/assets/plank.png" id="8_j5bck"]
+[ext_resource type="Texture2D" uid="uid://ijnuher4vjck" path="res://scenes/box_puzzle/assets/Shopkeeper_default.png" id="9_a6rce"]
+[ext_resource type="Texture2D" uid="uid://ccnkw424f0svd" path="res://scenes/box_puzzle/assets/normal_cat.png" id="10_e0sm8"]
+[ext_resource type="Texture2D" uid="uid://cavfqc2pvjnrc" path="res://scenes/box_puzzle/assets/bubble.png" id="11_35cyf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4002g"]
 size = Vector2(300, 50)
@@ -148,17 +151,24 @@ position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_4002g")
 
 [node name="HelpTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 25.0
 one_shot = true
 autostart = true
 
-[node name="HelpMeButton" type="Button" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="."]
 unique_name_in_owner = true
 visible = false
-offset_left = 850.0
-offset_top = 350.0
-offset_right = 1000.0
-offset_bottom = 400.0
+offset_left = 833.0
+offset_top = 232.0
+offset_right = 983.0
+offset_bottom = 282.0
+color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[node name="HelpMeButton" type="Button" parent="ColorRect2"]
+unique_name_in_owner = true
+offset_right = 150.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 30
 text = "Help!
 "
 
@@ -179,6 +189,41 @@ position = Vector2(576.69, 61)
 scale = Vector2(0.620599, 0.571429)
 texture = ExtResource("8_j5bck")
 
+[node name="ShopkeeperDefault" type="Sprite2D" parent="."]
+position = Vector2(1043, 481)
+texture = ExtResource("9_a6rce")
+
+[node name="NormalCat" type="Sprite2D" parent="."]
+position = Vector2(112, 459)
+scale = Vector2(0.369628, 0.369628)
+texture = ExtResource("10_e0sm8")
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(953.5, 150.75)
+scale = Vector2(1.395, 1.11453)
+texture = ExtResource("11_35cyf")
+flip_h = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 854.0
+offset_top = 86.0
+offset_right = 1091.0
+offset_bottom = 162.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Help me to move this box down"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 858.0
+offset_top = 68.0
+offset_right = 1095.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "I can remove horisontal box with jars if you want"
+autowrap_mode = 2
+
 [connection signal="body_entered" from="Field/WinArea" to="." method="_on_win_area_body_entered"]
 [connection signal="timeout" from="HelpTimer" to="." method="_on_help_timer_timeout"]
-[connection signal="pressed" from="HelpMeButton" to="." method="_on_help_me_pressed"]
+[connection signal="pressed" from="ColorRect2/HelpMeButton" to="." method="_on_help_me_pressed"]

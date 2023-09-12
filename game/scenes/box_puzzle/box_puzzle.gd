@@ -1,8 +1,11 @@
 extends Scene
 
 @onready var field: Node2D = $Field
+@onready var label1: Label = $Label
+@onready var label2: Label = $Label2
 @onready var rage_piece: Box = %BoxHorizontal
 @onready var help_me_button: Button = %HelpMeButton
+@onready var rect: ColorRect = %ColorRect2
 
 
 var active_box: Box = null
@@ -50,8 +53,12 @@ func _end_puzzle():
 
 func _on_help_me_pressed():
     rage_piece.destroy()
-    help_me_button.visible = false
+    rect.visible = false
+    # help_me_button.visible = false
 
 
 func _on_help_timer_timeout():
-    help_me_button.visible = true
+    rect.visible = true
+    # help_me_button.visible = true
+    label1.visible = false
+    label2.visible = true

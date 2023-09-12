@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blvt5n4yehhr"
-path="res://.godot/imported/Shopkeeper_default.png-269ad7940dc131e6e09e07559973e192.ctex"
+uid="uid://b4afqn0j1i18e"
+path="res://.godot/imported/puzzle2.png-02baf8d4a4496bc3155c1d4e562ee531.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/dialogue/characters/Shopkeeper_default.png"
-dest_files=["res://.godot/imported/Shopkeeper_default.png-269ad7940dc131e6e09e07559973e192.ctex"]
+source_file="res://scenes/box_puzzle/assets/puzzle2.png"
+dest_files=["res://.godot/imported/puzzle2.png-02baf8d4a4496bc3155c1d4e562ee531.ctex"]
 
 [params]
 

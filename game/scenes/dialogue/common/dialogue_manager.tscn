@@ -1,15 +1,19 @@
 [gd_scene load_steps=6 format=3 uid="uid://eobtqry0jeb5"]
 
 [ext_resource type="Script" path="res://scenes/dialogue/common/dialogue_manager.gd" id="1_vn7or"]
-[ext_resource type="Texture2D" uid="uid://dlf7x2w1klluh" path="res://scenes/dialogue/characters/Marcus_default.png" id="2_hp4ym"]
 [ext_resource type="PackedScene" uid="uid://dn7vyfv0gwa5d" path="res://scenes/dialogue/common/dialogue_box.tscn" id="2_um7pm"]
-[ext_resource type="Texture2D" uid="uid://j42707tfhh71" path="res://scenes/dialogue/characters/Lisa_default.png" id="3_apmg1"]
 [ext_resource type="PackedScene" uid="uid://6lvcht5dger6" path="res://scenes/dialogue/common/novel_character.tscn" id="3_rdlyi"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3rqh1"]
+load_path = "res://.godot/imported/Marcus_default.png-ffb52ccf3e83e7e7b01edf72b776f586.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ql8k6"]
+load_path = "res://.godot/imported/Lisa_default.png-d6d3866d3d027af41cb085ce6b7f30ea.ctex"
 
 [node name="DialogueManager" type="Node2D"]
 script = ExtResource("1_vn7or")
-left_texture = ExtResource("2_hp4ym")
-right_texture = ExtResource("3_apmg1")
+left_texture = SubResource("CompressedTexture2D_3rqh1")
+right_texture = SubResource("CompressedTexture2D_ql8k6")
 
 [node name="LeftCharacter" parent="." instance=ExtResource("3_rdlyi")]
 position = Vector2(241, 242)

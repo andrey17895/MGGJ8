@@ -1,16 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://iaq03ydn5nn"]
+[gd_scene load_steps=5 format=3 uid="uid://iaq03ydn5nn"]
 
 [ext_resource type="Script" path="res://scenes/main_menu/MainMenu.gd" id="1_nscpt"]
-[ext_resource type="Texture2D" uid="uid://dmqybg7yan3i" path="res://scenes/main_menu/assets/game_logo.png" id="2_p3v5q"]
 [ext_resource type="Texture2D" uid="uid://cfa71danguedm" path="res://scenes/main_menu/assets/background.png" id="2_pakt6"]
 [ext_resource type="Texture2D" uid="uid://c2kplb1m8p87l" path="res://scenes/main_menu/assets/heart.png" id="3_0uhsi"]
-[ext_resource type="Texture2D" uid="uid://hxclcvks8i7r" path="res://scenes/main_menu/assets/cataur.png" id="4_i8bex"]
+[ext_resource type="Texture2D" uid="uid://c61m730du7l5l" path="res://scenes/main_menu/assets/menu.png" id="4_tsre8"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_nscpt")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(569, 310)
+position = Vector2(797, 307)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_pakt6")
 
@@ -30,60 +29,31 @@ initial_velocity_min = 92.89
 initial_velocity_max = 283.73
 angular_velocity_max = 259.68
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="PulseTimer" type="Timer" parent="."]
+wait_time = 0.5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_right = 50
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 109.0
+offset_top = 232.0
+offset_right = 583.0
+offset_bottom = 298.0
 size_flags_vertical = 6
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer"]
-position = Vector2(0, 4)
-texture = ExtResource("2_p3v5q")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="NewGameButton" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer"]
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 text = "New game"
 
-[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Quit"
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
+[node name="Cute" type="Sprite2D" parent="."]
+position = Vector2(775, 326)
+scale = Vector2(0.339956, 0.339956)
+texture = ExtResource("4_tsre8")
 
-[node name="Cute" type="Sprite2D" parent="MarginContainer/HBoxContainer/MarginContainer"]
-texture = ExtResource("4_i8bex")
-
-[node name="PulseTimer" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
-
-[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="PulseTimer" to="." method="_on_pulse_timer_timeout"]
+[connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

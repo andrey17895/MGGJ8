@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyxnvlej3xot8"]
+
+[ext_resource type="Script" path="res://scenes/dialogue/dialugue.gd" id="1_48etc"]
+[ext_resource type="PackedScene" uid="uid://eobtqry0jeb5" path="res://scenes/dialogue/common/dialogue_manager.tscn" id="2_v87hl"]
+
+[node name="test_dialogue" type="Node2D"]
+script = ExtResource("1_48etc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 482.0
+offset_top = 139.0
+offset_right = 695.0
+offset_bottom = 252.0
+theme_override_font_sizes/font_size = 80
+text = "Фон4"
+
+[node name="DialogueManager" parent="." instance=ExtResource("2_v87hl")]
+file_path = "res://scenes/dialogue/dialogue6.6/dialogue6.6.json"
+
+[connection signal="dialogue_ended" from="DialogueManager" to="." method="_on_dialogue_manager_dialogue_ended"]

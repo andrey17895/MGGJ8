@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d007okumklcmo"
-path="res://.godot/imported/bean_bright.png-ef5090bc262f3381d62bb60c4c156d26.ctex"
+uid="uid://dcop8tqfp653m"
+path="res://.godot/imported/screamer.png-b4c73bf325ef3aefef5ca7c6e6758981.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/dialogue/characters/bean_bright.png"
-dest_files=["res://.godot/imported/bean_bright.png-ef5090bc262f3381d62bb60c4c156d26.ctex"]
+source_file="res://scenes/screamer/Assets/screamer.png"
+dest_files=["res://.godot/imported/screamer.png-b4c73bf325ef3aefef5ca7c6e6758981.ctex"]
 
 [params]
 

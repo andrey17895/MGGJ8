@@ -215,6 +215,7 @@ text = "Help me to move this box down"
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 offset_left = 858.0
 offset_top = 68.0
 offset_right = 1095.0

@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://scenes/plan/plan_scene.gd" id="1_kh0v7"]
 [ext_resource type="Texture2D" uid="uid://dbxqc8xbk2pyl" path="res://scenes/plan/assets/cat_with_board.png" id="2_7i8tw"]
-[ext_resource type="Texture2D" uid="uid://da33t88f4a8rn" path="res://scenes/plan/assets/familiar.jpg" id="3_kvbae"]
 [ext_resource type="Texture2D" uid="uid://bbs4d00ssyhda" path="res://scenes/plan/assets/cat_hand.png" id="3_si85s"]
 [ext_resource type="Texture2D" uid="uid://c7ouctxkmrp3f" path="res://scenes/plan/assets/girl.png" id="4_whjtl"]
-[ext_resource type="Texture2D" uid="uid://bcjqlx6yh4q11" path="res://scenes/plan/assets/magia.png" id="5_x71mp"]
-[ext_resource type="Texture2D" uid="uid://bx3at6rknvkvy" path="res://scenes/plan/assets/moonstick.png" id="6_dsmc2"]
+[ext_resource type="Texture2D" uid="uid://bcywglhn5xun1" path="res://scenes/plan/assets/familiar-removebg-preview.png" id="5_vr0yd"]
+[ext_resource type="Texture2D" uid="uid://buanwi0nwb3c5" path="res://scenes/plan/assets/magia-removebg-preview.png" id="7_1pc5q"]
 [ext_resource type="Texture2D" uid="uid://cbqtlq2vlkh3t" path="res://scenes/plan/assets/sad_cat.jpg" id="7_aimfw"]
+[ext_resource type="Texture2D" uid="uid://b532cuyag02yv" path="res://scenes/plan/assets/moonstick-removebg-preview.png" id="8_lj00p"]
 [ext_resource type="Texture2D" uid="uid://b0p0w4afqikvb" path="res://scenes/plan/assets/bubble.png" id="9_ow5hy"]
 
 [node name="PlanScene" type="Node2D" node_paths=PackedStringArray("sprites", "comments")]
@@ -55,7 +55,7 @@ offset_right = 1069.0
 offset_bottom = 139.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "Magic girl familiar - even cooler"
+text = "Magic girl's familiar - even cooler"
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="Comments"]
@@ -86,9 +86,9 @@ scale = Vector2(0.571078, 0.571078)
 texture = ExtResource("7_aimfw")
 
 [node name="Familiar" type="Sprite2D" parent="Sprites"]
-position = Vector2(368.222, 272.5)
-scale = Vector2(0.314961, 0.31496)
-texture = ExtResource("3_kvbae")
+position = Vector2(361, 273)
+scale = Vector2(0.56828, 0.568278)
+texture = ExtResource("5_vr0yd")
 
 [node name="Girl" type="Sprite2D" parent="Sprites"]
 position = Vector2(375.222, 270.5)
@@ -96,14 +96,14 @@ scale = Vector2(0.39, 0.39)
 texture = ExtResource("4_whjtl")
 
 [node name="Magia" type="Sprite2D" parent="Sprites"]
-position = Vector2(366.222, 266.5)
-scale = Vector2(0.272222, 0.272222)
-texture = ExtResource("5_x71mp")
+position = Vector2(379, 262)
+scale = Vector2(0.608111, 0.608111)
+texture = ExtResource("7_1pc5q")
 
 [node name="Moonstick" type="Sprite2D" parent="Sprites"]
-position = Vector2(361, 272)
-scale = Vector2(0.166428, 0.166428)
-texture = ExtResource("6_dsmc2")
+position = Vector2(369, 271)
+scale = Vector2(0.427163, 0.427163)
+texture = ExtResource("8_lj00p")
 
 [node name="Bubble" type="Sprite2D" parent="."]
 position = Vector2(841.926, 152.623)

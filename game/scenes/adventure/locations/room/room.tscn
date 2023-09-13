@@ -1,29 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmmpg2h30jt8"]
+[gd_scene load_steps=7 format=3 uid="uid://cmmpg2h30jt8"]
 
-[ext_resource type="Texture2D" uid="uid://csw5gjqpgxsql" path="res://scenes/adventure/locations/room/assets/room_background.jpeg" id="1_7iwoy"]
 [ext_resource type="Script" path="res://scenes/adventure/locations/room/room.gd" id="1_vwwsq"]
 [ext_resource type="PackedScene" uid="uid://ca74qrcvqrfd3" path="res://scenes/adventure/common/adv_character.tscn" id="2_rbixa"]
+[ext_resource type="Texture2D" uid="uid://cwb15kmlcsa8h" path="res://scenes/dialogue/common/assets/back1.jpg" id="2_vfwva"]
 [ext_resource type="PackedScene" uid="uid://clxnfy0qcdcjy" path="res://scenes/adventure/common/door.tscn" id="3_064sq"]
+[ext_resource type="Texture2D" uid="uid://clpljg2kcsins" path="res://scenes/adventure/locations/room/assets/tv.png" id="5_0o3eb"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_8b2cg"]
-vertices = PackedVector2Array(258, 360, 133, 348, 295, 245, 286, 318, 426, 330, 713, 249, 981, 433, 980, 382, 1158, 383, 1160, 505, 351, 517, 889, 437, 428, 410, 342, 420)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(6, 9, 10, 11), PackedInt32Array(5, 11, 10, 12), PackedInt32Array(10, 13, 12), PackedInt32Array(4, 5, 12)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(295, 245, 713, 249, 889, 437, 981, 433, 980, 382, 1158, 383, 1160, 505, 351, 517, 342, 420, 428, 410, 426, 330, 286, 318, 258, 360, 133, 348)])
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ljul0"]
+vertices = PackedVector2Array(1182.54, 483, 1185.53, 649, 529.451, 644, 578.308, 564, 806.641, 389, 548.396, 484)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(3, 5, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(548.396, 484, 806.641, 389, 1182.54, 483, 1185.53, 649, 529.451, 644, 578.308, 564)])
 
 [node name="room" type="Node2D"]
 script = ExtResource("1_vwwsq")
 
-[node name="RoomBackground" type="Sprite2D" parent="."]
-position = Vector2(578.5, 325.5)
-scale = Vector2(0.913281, 0.649751)
-texture = ExtResource("1_7iwoy")
+[node name="Back1" type="Sprite2D" parent="."]
+position = Vector2(600, 429)
+scale = Vector2(0.56438, 0.56438)
+texture = ExtResource("2_vfwva")
 
 [node name="Door" parent="." instance=ExtResource("3_064sq")]
-position = Vector2(574, 244)
-door_to = 1
+position = Vector2(1078, 468)
+rotation = 1.46196
+door_to = 2
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavigationPolygon_8b2cg")
+position = Vector2(5, -32)
+scale = Vector2(1.00292, 1)
+navigation_polygon = SubResource("NavigationPolygon_ljul0")
 
 [node name="adv_character" parent="." instance=ExtResource("2_rbixa")]
-position = Vector2(590, 379)
+position = Vector2(649, 493)
+
+[node name="Tv" type="Sprite2D" parent="."]
+position = Vector2(799, 644)
+scale = Vector2(0.570701, 0.570701)
+texture = ExtResource("5_0o3eb")

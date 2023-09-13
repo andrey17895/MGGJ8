@@ -1,8 +1,9 @@
 [
     {
         "position": "right",
+        "emotion": "sad",
         "name": "Lisa",
-        "line": "Enough."
+        "line": "Enough!"
     },
     {
         "position": "left",
@@ -11,16 +12,19 @@
     },
     {
         "position": "right",
+        "emotion": "sad",
         "name": "Lisa",
-        "line": "I said stop! Enough! You've ruined my clothes, my phone. "
+        "line": "I said stop! Enough! You've ruined my clothes, my phone."
     },
     {
         "position": "right",
+        "emotion": "sad",
         "name": "Lisa",
         "line": "How shall I pay rent and feed you, if you spent all MY money on your wish?!"
     },
     {
         "position": "right",
+        "emotion": "sad",
         "name": "Lisa",
         "line": "It's not even YOUR wish if you want to change ME!!!"
     },
@@ -31,21 +35,25 @@
     },
     {
         "position": "right",
+        "emotion": "sad",
         "name": "Lisa",
         "line": "How shall I pay rent and feed you, if you spent all MY money on your wish?!"
     },
     {
         "position": "right",
+        "emotion": "sad",
         "name": "Lisa",
         "line": "I tried hard to join your ideas and share your interests. And what I got?!"
     },
     {
         "position": "right",
+        "emotion": "sad",
         "name": "Lisa",
         "line": "Ignorance and problems! Do you care about me?"
     },
     {
         "position": "right",
+        "emotion": "sad",
         "name": "Lisa",
         "line": "Do you even know, who am I in my life?!!!"
     },

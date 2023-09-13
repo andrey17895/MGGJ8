@@ -12,12 +12,12 @@
     {
         "position": "left",
         "name": "Marcus",
-        "line": "I need to tell you, something."
+        "line": "I need to tell you something."
     },
     {
         "position": "right",
         "name": "Lisa",
-        "line": "You are the magic girl now!"
+        "line": "You are a magic girl now!"
     },
     {
         "position": "left",
@@ -32,7 +32,7 @@
     {
         "position": "left",
         "name": "Marcus",
-        "line": "I promise, I'll support your hobbies and interests too now."
+        "line": "I promise, I'll support your hobbies and interests now."
     },
     {
         "position": "left",
@@ -42,7 +42,7 @@
     {
         "position": "right",
         "name": "Lisa",
-        "line": "But you ARE a magic girl now! You got that transformation and powers."
+        "line": "But you ARE a Magic Girl now! You got that transformation and powers."
     },
     {
         "position": "right",
@@ -57,7 +57,7 @@
     {
         "position": "right",
         "name": "Lisa",
-        "line": "Why not? If anyone asks, we'll tell you are a neko-girl."
+        "line": "Why not? If anyone asks, we'll tell you are a neko girl."
     },
     {
         "position": "left",

@@ -2,7 +2,7 @@
 	{
 		 "position": "right",
 		 "name": "Lisa",
-		 "line": "Marcus, you're watching anime so much (and so loud) in my flat that I feel like a character of Shojo too."
+		 "line": "Marcus, you're watching anime so much (and so loud) that I feel like a Shojo character too."
 	 },
 	{
 		 "position": "right",
@@ -59,6 +59,6 @@
 	 },    {
 		 "position": "left",
 		 "name": "Marcus",
-		 "line": "Let me explain you!"
+		 "line": "Let me explain!"
 	 }
  ]

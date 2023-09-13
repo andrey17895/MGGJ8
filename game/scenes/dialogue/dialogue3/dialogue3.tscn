@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt4yj04quxrtb"]
+[gd_scene load_steps=5 format=3 uid="uid://dt4yj04quxrtb"]
 
 [ext_resource type="Script" path="res://scenes/dialogue/dialugue.gd" id="1_0oeg2"]
+[ext_resource type="Texture2D" uid="uid://cwb15kmlcsa8h" path="res://scenes/dialogue/common/assets/back1.jpg" id="2_aheby"]
 [ext_resource type="PackedScene" uid="uid://eobtqry0jeb5" path="res://scenes/dialogue/common/dialogue_manager.tscn" id="2_q6lad"]
+[ext_resource type="Texture2D" uid="uid://bo0owlv087it4" path="res://scenes/dialogue/common/assets/clothes-min.png" id="4_p0rqg"]
 
 [node name="test_dialogue" type="Node2D"]
 script = ExtResource("1_0oeg2")
@@ -14,7 +16,24 @@ offset_bottom = 252.0
 theme_override_font_sizes/font_size = 80
 text = "Фон2"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1167.0
+offset_bottom = 659.0
+mouse_filter = 2
+color = Color(0.839216, 0.74902, 0.654902, 1)
+
+[node name="Background1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 381)
+scale = Vector2(0.548721, 0.548721)
+texture = ExtResource("2_aheby")
+
 [node name="DialogueManager" parent="." instance=ExtResource("2_q6lad")]
 file_path = "res://scenes/dialogue/dialogue3/dialogue3.json"
+
+[node name="Clothes-min" type="Sprite2D" parent="."]
+position = Vector2(567, 216)
+scale = Vector2(0.226714, 0.226714)
+texture = ExtResource("4_p0rqg")
 
 [connection signal="dialogue_ended" from="DialogueManager" to="." method="_on_dialogue_manager_dialogue_ended"]

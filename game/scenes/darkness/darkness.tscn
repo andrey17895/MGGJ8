@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dseo0p6mismjk"]
+
+[ext_resource type="Script" path="res://scenes/darkness/darkness.gd" id="1_pml22"]
+[ext_resource type="Texture2D" uid="uid://d5bcf21ql2ic" path="res://scenes/dialogue/common/assets/back3_dark.jpg" id="2_l68d1"]
+[ext_resource type="Texture2D" uid="uid://c22eexe3unn8w" path="res://scenes/darkness/assets/monster0.png" id="4_bidi5"]
+[ext_resource type="Texture2D" uid="uid://k3gugbehhuug" path="res://scenes/darkness/assets/monster1.png" id="5_x3fpo"]
+[ext_resource type="Texture2D" uid="uid://d0dpk03tqbfkp" path="res://scenes/darkness/assets/monster2.png" id="6_3b2gc"]
+[ext_resource type="Texture2D" uid="uid://bn1ewb66ewyd4" path="res://scenes/darkness/assets/monster3.png" id="7_d052w"]
+[ext_resource type="Texture2D" uid="uid://kmn7pqfub3ax" path="res://scenes/darkness/assets/monster4.png" id="8_kh413"]
+
+[node name="Darkness" type="Node2D"]
+script = ExtResource("1_pml22")
+
+[node name="Back3" type="Sprite2D" parent="."]
+position = Vector2(578.06, 366.312)
+scale = Vector2(0.522147, 0.522147)
+texture = ExtResource("2_l68d1")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(545, 283)
+scale = Vector2(0.7, 0.7)
+
+[node name="s2" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(81.1606, 94.5)
+texture = ExtResource("4_bidi5")
+
+[node name="s3" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(23.1606, 77.5)
+texture = ExtResource("5_x3fpo")
+
+[node name="s4" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(23.1606, 77.5)
+texture = ExtResource("6_3b2gc")
+
+[node name="s5" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(23.1606, 82.5)
+scale = Vector2(1.05275, 1.05275)
+texture = ExtResource("7_d052w")
+
+[node name="s6" type="Sprite2D" parent="Node2D"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-58.8395, 11.5)
+scale = Vector2(1.04586, 1.04586)
+texture = ExtResource("8_kh413")

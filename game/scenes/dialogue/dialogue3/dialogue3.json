@@ -2,27 +2,32 @@
     {
         "position": "right",
         "name": "Lisa",
-        "line": "That is a glittery mess."
+        "line": "Wait a moment, what's that?!"
     },
     {
         "position": "right",
         "name": "Lisa",
-        "line": "When did you even manage to do all of this."
-    },
-    {
-        "position": "left",
-        "name": "Marcus",
-        "line": "Lets say I have my own ways..."
-    },
-    {
-        "position": "left",
-        "name": "Marcus",
-        "line": "Dont think about it. Lets focus on important staff."
+        "line": "That is a glittery mess!"
     },
     {
         "position": "right",
         "name": "Lisa",
-        "line": "All of my clothes is ruined!"
+        "line": "When did you even manage to do all of this?"
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Lets say, I have my own ways..."
+    },
+    {
+        "position": "left",
+        "name": "Marcus",
+        "line": "Don't think about it. Let's focus on important staff."
+    },
+    {
+        "position": "right",
+        "name": "Lisa",
+        "line": "All my clothes are ruined!"
     },
     {
         "position": "right",
@@ -37,6 +42,6 @@
     {
         "position": "right",
         "name": "Lisa",
-        "line": "Whatever. I just don't wanna see all this."
+        "line": "I do hope we'll buy something to wash them before it's too late."
     }
 ]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://byeos2pi774j1"]
+[gd_scene load_steps=5 format=3 uid="uid://byeos2pi774j1"]
 
 [ext_resource type="Script" path="res://scenes/dialogue/dialugue.gd" id="1_m55pd"]
 [ext_resource type="PackedScene" uid="uid://eobtqry0jeb5" path="res://scenes/dialogue/common/dialogue_manager.tscn" id="2_cqypv"]
+[ext_resource type="Texture2D" uid="uid://d5bcf21ql2ic" path="res://scenes/dialogue/common/assets/back3_dark.jpg" id="2_lsyy1"]
+[ext_resource type="Texture2D" uid="uid://vyqaescutik" path="res://scenes/dialogue/characters/Lisa_sad.png" id="4_ft4qc"]
 
 [node name="test_dialogue" type="Node2D"]
 script = ExtResource("1_m55pd")
@@ -14,7 +16,13 @@ offset_bottom = 252.0
 theme_override_font_sizes/font_size = 80
 text = "Фон4"
 
+[node name="Back3" type="Sprite2D" parent="."]
+position = Vector2(578.06, 366.312)
+scale = Vector2(0.522147, 0.522147)
+texture = ExtResource("2_lsyy1")
+
 [node name="DialogueManager" parent="." instance=ExtResource("2_cqypv")]
 file_path = "res://scenes/dialogue/dialogue6.5/dialogue6.5.json"
+right_texture = ExtResource("4_ft4qc")
 
 [connection signal="dialogue_ended" from="DialogueManager" to="." method="_on_dialogue_manager_dialogue_ended"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dn7vyfv0gwa5d"]
+[gd_scene load_steps=3 format=3 uid="uid://dn7vyfv0gwa5d"]
 
 [ext_resource type="Script" path="res://scenes/dialogue/common/dialogue_box.gd" id="1_hqupj"]
+[ext_resource type="Texture2D" uid="uid://45clh1arwbt0" path="res://scenes/dialogue/common/assets/box.png" id="2_0f88j"]
 
 [node name="DialogueBox" type="Node2D"]
 script = ExtResource("1_hqupj")
@@ -9,6 +10,14 @@ script = ExtResource("1_hqupj")
 offset_right = 800.0
 offset_bottom = 200.0
 mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Box" type="Sprite2D" parent="ColorRect"]
+texture_filter = 1
+position = Vector2(-9, -21)
+scale = Vector2(1.0225, 1.205)
+texture = ExtResource("2_0f88j")
+centered = false
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
 layout_mode = 1
@@ -27,7 +36,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
 text = "Name"
 
 [node name="Text" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
@@ -35,7 +44,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "asdjghsidfb dfskjnbsdfhbsjhdbogfoifjgsdfhh kdfjg roirgj dfkgjdsfgfd gskldfj sofdj"
+text = "asdjghsidfb dfskjnbsdfhbsjhdbogfoifjgsdfhh kdfjg roirgj dfkgjdsfgfd gskldfj sofdj gfdshgdfsjg;hdfb eof gfdsohgadf goiw"
 autowrap_mode = 2
 
 [node name="TypingTimer" type="Timer" parent="."]

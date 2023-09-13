@@ -1,18 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://ca74qrcvqrfd3"]
 
 [ext_resource type="Script" path="res://scenes/adventure/common/adv_character.gd" id="1_04njd"]
-[ext_resource type="Texture2D" uid="uid://c8nm4xsvy3uk0" path="res://scenes/adventure/common/assets/luci.png" id="1_sd26g"]
+[ext_resource type="Texture2D" uid="uid://rep7jv81kxhw" path="res://scenes/adventure/common/assets/normal_cat.png" id="2_jd1ry"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_41swo"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntg2c"]
+size = Vector2(94, 39)
 
 [node name="AdvCharacter" type="CharacterBody2D"]
 script = ExtResource("1_04njd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_41swo")
+position = Vector2(-3, -11.5)
+shape = SubResource("RectangleShape2D_ntg2c")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="Luci" type="Sprite2D" parent="."]
-position = Vector2(3, -75)
-texture = ExtResource("1_sd26g")
+position = Vector2(-17, -132)
+scale = Vector2(0.343246, 0.343246)
+texture = ExtResource("2_jd1ry")

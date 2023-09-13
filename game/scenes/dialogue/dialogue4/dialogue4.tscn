@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://2lrqj0dj4tfs"]
+[gd_scene load_steps=4 format=3 uid="uid://2lrqj0dj4tfs"]
 
 [ext_resource type="Script" path="res://scenes/dialogue/dialugue.gd" id="1_kxr56"]
 [ext_resource type="PackedScene" uid="uid://eobtqry0jeb5" path="res://scenes/dialogue/common/dialogue_manager.tscn" id="2_j61d1"]
+[ext_resource type="Texture2D" uid="uid://bv7mymfpydlxl" path="res://scenes/dialogue/common/assets/back2.jpg" id="2_mdw46"]
 
 [node name="test_dialogue" type="Node2D"]
 script = ExtResource("1_kxr56")
@@ -13,6 +14,11 @@ offset_right = 695.0
 offset_bottom = 252.0
 theme_override_font_sizes/font_size = 80
 text = "Фон3"
+
+[node name="Back2" type="Sprite2D" parent="."]
+position = Vector2(582, 345)
+scale = Vector2(0.514589, 0.514589)
+texture = ExtResource("2_mdw46")
 
 [node name="DialogueManager" parent="." instance=ExtResource("2_j61d1")]
 file_path = "res://scenes/dialogue/dialogue4/dialogue4.json"

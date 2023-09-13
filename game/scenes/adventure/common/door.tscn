@@ -1,21 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://clxnfy0qcdcjy"]
 
 [ext_resource type="Script" path="res://scenes/adventure/common/door.gd" id="1_ii4so"]
-[ext_resource type="Texture2D" uid="uid://bppmpepdlsxd3" path="res://scenes/adventure/locations/room/assets/door.png" id="2_rkgyn"]
+[ext_resource type="Texture2D" uid="uid://dccixw7iw8vf3" path="res://scenes/adventure/common/assets/locations_change.png" id="2_7kn5h"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y85ji"]
-radius = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hu2ub"]
+size = Vector2(318, 103)
 
 [node name="Door" type="Node2D" groups=["door"]]
 script = ExtResource("1_ii4so")
 
-[node name="Door" type="Sprite2D" parent="."]
-position = Vector2(3, -190)
-texture = ExtResource("2_rkgyn")
-
 [node name="Area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
-shape = SubResource("CircleShape2D_y85ji")
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_hu2ub")
+
+[node name="LocationsChange" type="Sprite2D" parent="."]
+position = Vector2(-2, -6)
+scale = Vector2(0.341615, 0.341615)
+texture = ExtResource("2_7kn5h")
 
 [connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]

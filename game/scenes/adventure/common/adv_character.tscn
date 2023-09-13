@@ -10,12 +10,12 @@ size = Vector2(94, 39)
 script = ExtResource("1_04njd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -11.5)
+position = Vector2(-1.20714, 2.60385)
 shape = SubResource("RectangleShape2D_ntg2c")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="Luci" type="Sprite2D" parent="."]
-position = Vector2(-17, -132)
+position = Vector2(-15.2071, -117.896)
 scale = Vector2(0.343246, 0.343246)
 texture = ExtResource("2_jd1ry")

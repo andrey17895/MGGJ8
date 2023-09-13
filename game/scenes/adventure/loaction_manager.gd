@@ -8,13 +8,15 @@ signal adventure_ended
 enum Location {
 	Room,
 	Forest,
-	Street
+	Street,
+	Street2
 }
 
 var locations: Dictionary = {
 	Location.Room: "res://scenes/adventure/locations/room/room.tscn",
 	Location.Forest: "res://scenes/adventure/locations/forest/forest.tscn",
-	Location.Street: "res://scenes/adventure/locations/street/street.tscn"
+	Location.Street: "res://scenes/adventure/locations/street/street.tscn",
+	Location.Street2: "res://scenes/adventure/locations/street2/street2.tscn"
 }
 
 var current_scene: LocationScene

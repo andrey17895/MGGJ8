@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c44bdog0xlegm"]
+
+[ext_resource type="Script" path="res://scenes/adventure/Adventure.gd" id="1_o50oc"]
+[ext_resource type="Script" path="res://scenes/adventure/loaction_manager.gd" id="2_ek2f1"]
+
+[node name="Adventure2" type="Node2D"]
+script = ExtResource("1_o50oc")
+
+[node name="LocationManager" type="Node" parent="."]
+script = ExtResource("2_ek2f1")
+start_location = 3
+
+[connection signal="adventure_ended" from="LocationManager" to="." method="_on_location_manager_adventure_ended"]

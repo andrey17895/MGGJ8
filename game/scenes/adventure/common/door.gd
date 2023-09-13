@@ -1,7 +1,6 @@
 extends Node2D
 class_name Door
 
-
 @export var door_to: LocationManager.Location
 
 signal location_exited(location: PackedScene)

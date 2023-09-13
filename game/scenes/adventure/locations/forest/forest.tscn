@@ -1,43 +1,48 @@
 [gd_scene load_steps=7 format=3 uid="uid://cqxftuy1ia2dt"]
 
 [ext_resource type="Script" path="res://scenes/adventure/locations/forest/forest.gd" id="1_jxm23"]
-[ext_resource type="Texture2D" uid="uid://dhtksbnyh8hcq" path="res://scenes/adventure/locations/forest/assets/forest_background.png" id="1_unih8"]
+[ext_resource type="Texture2D" uid="uid://cqqc4kwknvwhs" path="res://scenes/dialogue/common/assets/back3.jpg" id="2_ftfwj"]
 [ext_resource type="PackedScene" uid="uid://ca74qrcvqrfd3" path="res://scenes/adventure/common/adv_character.tscn" id="3_icyv0"]
 [ext_resource type="PackedScene" uid="uid://clxnfy0qcdcjy" path="res://scenes/adventure/common/door.tscn" id="3_pee51"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dr62u"]
-radius = 20.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpg4m"]
+size = Vector2(168, 77)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1r5pj"]
-vertices = PackedVector2Array(261, 567, 308, 454, 714, 439, 931, 531)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(261, 567, 308, 454, 714, 439, 931, 531)])
+vertices = PackedVector2Array(124, 542, -1, 599, -5, 460, 243, 602, 500, 512, 352, 597, 635, 555, 595, 616, 534, 639, 393, 623, 572, 473, 549, 355, 549, 299, 679, 296, 658, 358, 593, 416, 687, 414, 709, 485, 692, 529)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4, 5), PackedInt32Array(6, 7, 8, 9, 5, 4, 10), PackedInt32Array(11, 12, 13, 14, 15), PackedInt32Array(10, 15, 14, 16, 17, 18, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1, 599, -5, 460, 500, 512, 572, 473, 593, 416, 549, 355, 549, 299, 679, 296, 658, 358, 687, 414, 709, 485, 692, 529, 635, 555, 595, 616, 534, 639, 393, 623, 352, 597, 243, 602, 124, 542)])
 
 [node name="Forest" type="Node2D"]
 script = ExtResource("1_jxm23")
 
-[node name="ForestBackground" type="Sprite2D" parent="."]
-position = Vector2(592.263, 338.25)
-scale = Vector2(1.20053, 1.20053)
-texture = ExtResource("1_unih8")
+[node name="Back3" type="Sprite2D" parent="."]
+position = Vector2(608, 344)
+scale = Vector2(0.541892, 0.541892)
+texture = ExtResource("2_ftfwj")
 
 [node name="Door" parent="." instance=ExtResource("3_pee51")]
-position = Vector2(666, 416)
+position = Vector2(75, 511)
+rotation = -1.7397
+door_to = 3
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(898, 528)
+position = Vector2(593, 319)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_dr62u")
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tpg4m")
 
 [node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+visible = false
 color = Color(1, 0.00784314, 0, 1)
 polygon = PackedVector2Array(-17, 10, -19, -19, 21, -15, 22, 12)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-7, 1)
 navigation_polygon = SubResource("NavigationPolygon_1r5pj")
 
 [node name="AdvCharacter" parent="." instance=ExtResource("3_icyv0")]
-position = Vector2(320, 530)
+position = Vector2(211, 524)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

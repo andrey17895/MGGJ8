@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3ce7a1uud27i"
-path="res://.godot/imported/cat_board.png-fcf1b4da3648f537bc895c20f4ce11e6.ctex"
+uid="uid://bttusjuoxg4oe"
+path="res://.godot/imported/magic_cat.png-5bbb6bd8c140fbaf1d2187add3b8733c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/plan/assets/cat_board.png"
-dest_files=["res://.godot/imported/cat_board.png-fcf1b4da3648f537bc895c20f4ce11e6.ctex"]
+source_file="res://scenes/bossfight/assets/magic_cat.png"
+dest_files=["res://.godot/imported/magic_cat.png-5bbb6bd8c140fbaf1d2187add3b8733c.ctex"]
 
 [params]
 

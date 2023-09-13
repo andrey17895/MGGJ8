@@ -1,4 +1,5 @@
 extends Scene
+class_name DialogueScene
 
 
 

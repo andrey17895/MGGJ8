@@ -158,14 +158,15 @@ autostart = true
 [node name="ColorRect2" type="ColorRect" parent="."]
 unique_name_in_owner = true
 visible = false
-offset_left = 833.0
-offset_top = 232.0
-offset_right = 983.0
-offset_bottom = 282.0
+offset_left = 55.0
+offset_top = 260.0
+offset_right = 205.0
+offset_bottom = 310.0
 color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 
 [node name="HelpMeButton" type="Button" parent="ColorRect2"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_right = 150.0
 offset_bottom = 50.0
 theme_override_font_sizes/font_size = 30
@@ -211,7 +212,7 @@ offset_right = 1091.0
 offset_bottom = 162.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
-text = "Help me to move this box down"
+text = "Help me move this box down"
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="."]
@@ -222,7 +223,7 @@ offset_right = 1095.0
 offset_bottom = 220.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 22
-text = "I can remove horisontal box with jars if you want"
+text = "I can remove long box with jars if you want"
 autowrap_mode = 2
 
 [connection signal="body_entered" from="Field/WinArea" to="." method="_on_win_area_body_entered"]

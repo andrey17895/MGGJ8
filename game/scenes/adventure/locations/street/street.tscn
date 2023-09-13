@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs7c7mi8gygrq"]
+[gd_scene load_steps=8 format=3 uid="uid://bs7c7mi8gygrq"]
 
 [ext_resource type="Script" path="res://scenes/adventure/locations/street/street.gd" id="1_cp17n"]
 [ext_resource type="PackedScene" uid="uid://clxnfy0qcdcjy" path="res://scenes/adventure/common/door.tscn" id="2_gss1n"]
 [ext_resource type="Texture2D" uid="uid://bv7mymfpydlxl" path="res://scenes/dialogue/common/assets/back2.jpg" id="2_o7gcd"]
 [ext_resource type="PackedScene" uid="uid://ca74qrcvqrfd3" path="res://scenes/adventure/common/adv_character.tscn" id="3_stc36"]
+[ext_resource type="Texture2D" uid="uid://dccixw7iw8vf3" path="res://scenes/adventure/common/assets/locations_change.png" id="5_63474"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_c7v3v"]
 vertices = PackedVector2Array(259.242, 595, 254.256, 479, 348.979, 481, 381.883, 577, 315.078, 684, 443.702, 631, 1141.66, 671, 636.139, 618, 1144.65, 544, 690.979, 539, 877.434, 532, 827.579, 361, 857.492, 422, 696.961, 502, 738.839, 352, 685.994, 404, 673.031, 466)
@@ -11,7 +12,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32
 outlines = Array[PackedVector2Array]([PackedVector2Array(348.979, 481, 381.883, 577, 443.702, 631, 636.139, 618, 690.979, 539, 696.961, 502, 673.031, 466, 685.994, 404, 738.839, 352, 827.579, 361, 857.492, 422, 877.434, 532, 1144.65, 544, 1141.66, 671, 315.078, 684, 259.242, 595, 254.256, 479)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i6vxy"]
-size = Vector2(105, 26)
+size = Vector2(119, 49)
 
 [node name="Street" type="Node2D"]
 script = ExtResource("1_cp17n")
@@ -35,11 +36,17 @@ navigation_polygon = SubResource("NavigationPolygon_c7v3v")
 position = Vector2(972, 613)
 scale = Vector2(0.65, 0.65)
 
+[node name="LocationsChange" type="Sprite2D" parent="."]
+position = Vector2(317, 434)
+rotation = -0.212764
+scale = Vector2(0.232919, 0.232919)
+texture = ExtResource("5_63474")
+
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(317, 439)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.5, 2)
+position = Vector2(8.5, 13.5)
 shape = SubResource("RectangleShape2D_i6vxy")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/transormation/transformation.gd" id="1_br1lb"]
 [ext_resource type="Texture2D" uid="uid://h2fexxpr6won" path="res://scenes/transormation/assets/bg_0.png" id="2_cru1m"]
 [ext_resource type="Texture2D" uid="uid://qrcg4f7hkpdy" path="res://scenes/transormation/assets/bg.png" id="3_4l0ie"]
-[ext_resource type="Texture2D" uid="uid://b0okc4pvp58eb" path="res://scenes/transormation/assets/bossfight_player_chibi.png" id="3_l8tcp"]
+[ext_resource type="Texture2D" uid="uid://bttusjuoxg4oe" path="res://scenes/bossfight/assets/magic_cat.png" id="4_jf5ye"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xdprr"]
 
@@ -157,7 +157,8 @@ modulate = Color(0, 0, 0, 1)
 material = SubResource("ShaderMaterial_xdprr")
 position = Vector2(561, 842)
 rotation = -0.493928
-texture = ExtResource("3_l8tcp")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_jf5ye")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

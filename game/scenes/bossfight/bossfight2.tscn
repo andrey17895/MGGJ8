@@ -1,10 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://8753512ot6xl"]
+[gd_scene load_steps=3 format=3 uid="uid://8753512ot6xl"]
 
 [ext_resource type="PackedScene" uid="uid://bwgiy4ofxr38s" path="res://scenes/bossfight/Bossfight.tscn" id="1_okewx"]
+[ext_resource type="Texture2D" uid="uid://bttusjuoxg4oe" path="res://scenes/bossfight/assets/magic_cat.png" id="2_y4kwl"]
 
 [node name="Bossfight" instance=ExtResource("1_okewx")]
+
+[node name="ShotTimer" parent="Player" index="3"]
+wait_time = 0.2
+
+[node name="BossfightPlayer" parent="Player" index="4"]
+position = Vector2(7.00012, -3.5)
+scale = Vector2(0.0685578, 0.0685578)
+texture = ExtResource("2_y4kwl")
+
+[node name="Enemy" parent="." index="1"]
+start_health = 50.0
+kill_health = 0.0
 
 [node name="PatternManager" parent="Enemy" index="7" node_paths=PackedStringArray("attack_type_array")]
 attack_type_array = [NodePath("Patterns/Circular"), NodePath("Patterns/Fan")]
 
+[editable path="Player"]
 [editable path="Enemy"]

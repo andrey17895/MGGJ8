@@ -19,6 +19,7 @@ comments = [NodePath("Comments/Label"), NodePath("Comments/Label2"), NodePath("C
 offset_right = 1159.0
 offset_bottom = 649.0
 mouse_filter = 2
+color = Color(0.839216, 0.74902, 0.654902, 1)
 
 [node name="Cat" type="Sprite2D" parent="."]
 position = Vector2(525.926, 337.623)
@@ -111,6 +112,7 @@ scale = Vector2(0.427163, 0.427163)
 texture = ExtResource("8_lj00p")
 
 [node name="Bubble" type="Sprite2D" parent="."]
+modulate = Color(0.854902, 0.772549, 0.686275, 1)
 position = Vector2(841.926, 152.623)
 scale = Vector2(2.71336, 1.33657)
 texture = ExtResource("9_ow5hy")

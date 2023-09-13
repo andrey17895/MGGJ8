@@ -33,7 +33,7 @@ func _process(_delta: float) -> void:
 	if progress_bar.value == 100:
 		win = true
 		progress_bar.visible = false
-		sprite.modulate = Color(1.0, 0.45, 0.95, 1.0)
+		# sprite.modulate = Color(1.0, 0.45, 0.95, 1.0)
 		sprite.texture = cute_cat_texture
 		win_sfx.play()
 		end_timer.start()

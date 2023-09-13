@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuxft3i2epa8l"
-path="res://.godot/imported/cat.jpg-ed8fd4b03c0e2607a3167f90c0662791.ctex"
+uid="uid://wmu5gx43udoh"
+path="res://.godot/imported/final-min.png-4011fc59b4e487a1a2c274f8e9384e03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/plan/assets/cat.jpg"
-dest_files=["res://.godot/imported/cat.jpg-ed8fd4b03c0e2607a3167f90c0662791.ctex"]
+source_file="res://scenes/credits/final-min.png"
+dest_files=["res://.godot/imported/final-min.png-4011fc59b4e487a1a2c274f8e9384e03.ctex"]
 
 [params]
 

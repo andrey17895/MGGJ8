@@ -54,6 +54,8 @@ func _end_puzzle():
 func _on_help_me_pressed():
     rage_piece.destroy()
     rect.visible = false
+    $Bubble.visible = false
+    $Label2.visible = false
     # help_me_button.visible = false
 
 

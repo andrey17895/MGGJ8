@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://dt4yj04quxrtb"]
 
-[ext_resource type="Script" path="res://scenes/dialogue/dialugue.gd" id="1_0oeg2"]
+[ext_resource type="Script" path="res://scenes/dialogue/dialogue3/dialogue3.gd" id="1_6x6i6"]
 [ext_resource type="Texture2D" uid="uid://cwb15kmlcsa8h" path="res://scenes/dialogue/common/assets/back1.jpg" id="2_aheby"]
 [ext_resource type="PackedScene" uid="uid://eobtqry0jeb5" path="res://scenes/dialogue/common/dialogue_manager.tscn" id="2_q6lad"]
 [ext_resource type="Texture2D" uid="uid://bo0owlv087it4" path="res://scenes/dialogue/common/assets/clothes-min.png" id="4_p0rqg"]
 
 [node name="test_dialogue" type="Node2D"]
-script = ExtResource("1_0oeg2")
+script = ExtResource("1_6x6i6")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 482.0

@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://7a26b1i2yrat"]
+
+[ext_resource type="Script" path="res://scenes/cute_cat/cute_cat.gd" id="1_cv3qv"]
+[ext_resource type="Texture2D" uid="uid://h33et8sq24xw" path="res://scenes/cute_cat/assets/eyes4.png" id="2_hvejb"]
+[ext_resource type="Texture2D" uid="uid://b153vk10ovush" path="res://scenes/cute_cat/assets/eyes3.png" id="3_huyqb"]
+[ext_resource type="Texture2D" uid="uid://2elhabu2047w" path="res://scenes/cute_cat/assets/gauge_background.png" id="4_roltq"]
+[ext_resource type="Texture2D" uid="uid://be4hw2xwax7pk" path="res://scenes/cute_cat/assets/gauge_indicator_fixed.png" id="5_q0y2t"]
+[ext_resource type="PackedScene" uid="uid://c06eo3bab3n6s" path="res://common/shaky_camera.tscn" id="6_hjhbx"]
+[ext_resource type="AudioStream" uid="uid://crxfh5hd7kxlc" path="res://scenes/cute_cat/assets/push.wav" id="7_o7rh2"]
+[ext_resource type="AudioStream" uid="uid://br21q557my27x" path="res://scenes/cute_cat/assets/sad.mp3" id="8_mhu5d"]
+
+[node name="CuteCat" type="Node2D"]
+script = ExtResource("1_cv3qv")
+cute_cat_texture = ExtResource("2_hvejb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1174.0
+offset_bottom = 669.0
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(591, 323)
+scale = Vector2(0.80212, 0.80212)
+texture = ExtResource("3_huyqb")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 19.0
+offset_top = 59.0
+offset_right = 219.0
+offset_bottom = 559.0
+step = 0.1
+fill_mode = 3
+texture_under = ExtResource("4_roltq")
+texture_progress = ExtResource("5_q0y2t")
+texture_progress_offset = Vector2(35, 30)
+
+[node name="ChillTimer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[node name="Camera2D" parent="." instance=ExtResource("6_hjhbx")]
+anchor_mode = 0
+
+[node name="PushSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_o7rh2")
+
+[node name="WinSfx" type="AudioStreamPlayer2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+stream = ExtResource("8_mhu5d")
+
+[node name="NextButton" type="Button" parent="."]
+visible = false
+offset_left = 735.0
+offset_top = 540.0
+offset_right = 1128.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 40
+text = "Next"
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="ChillTimer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]

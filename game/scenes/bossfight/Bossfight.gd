@@ -19,6 +19,7 @@ func _ready() -> void:
 	top_left = player.top_left
 	bottom_right = player.bottom_right
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	enemy_health.value = enemy.health
 	
 func _process(delta: float) -> void:
 	parallax.scroll_offset.x += parallax_speed * delta

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx3at6rknvkvy"
-path="res://.godot/imported/moonstick.png-8ebbcc9af0e62408119e3dde737cd404.ctex"
+uid="uid://b153vk10ovush"
+path="res://.godot/imported/eyes3.png-204920817a1e101814a3d4100c9bbfbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/plan/assets/moonstick.png"
-dest_files=["res://.godot/imported/moonstick.png-8ebbcc9af0e62408119e3dde737cd404.ctex"]
+source_file="res://scenes/cute_cat/assets/eyes3.png"
+dest_files=["res://.godot/imported/eyes3.png-204920817a1e101814a3d4100c9bbfbb.ctex"]
 
 [params]
 

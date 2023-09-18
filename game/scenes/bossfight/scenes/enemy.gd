@@ -4,6 +4,7 @@ class_name Enemy
 @export var speed: float = 300
 @export var travel: int = 150
 @export var target: Node2D
+@export var kill_animation: String = "enemy_death"
 
 @export var projectile_scene: PackedScene
 
@@ -26,6 +27,7 @@ var is_moving: bool = true
 func _ready() -> void:
 	initial_position = self.position
 	pattern_manager._switch_pattern()
+	self.health = start_health
 
 func _physics_process(delta: float) -> void:
 	if is_moving:
@@ -50,7 +52,7 @@ func _hit_animation() -> void:
 func _kill_animation() -> void:
 	set_physics_process(false)
 	fire_timer.stop()
-	animation.play("enemy_death")
+	animation.play(kill_animation)
 	await animation.animation_finished
 
 

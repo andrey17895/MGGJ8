@@ -19,7 +19,7 @@ func _ready() -> void:
 	top_left = player.top_left
 	bottom_right = player.bottom_right
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	enemy_health.value = enemy.health
+	enemy_health.value = enemy.health / enemy.max_health * 100
 	
 func _process(delta: float) -> void:
 	parallax.scroll_offset.x += parallax_speed * delta
@@ -34,7 +34,8 @@ func _on_player_health_changed(percent) -> void:
 
 
 func _on_enemy_health_changed(percent) -> void:
-	enemy_health.value = percent
+	if enemy_health:
+		enemy_health.value = percent
 
 
 func _on_enemy_character_killed() -> void:

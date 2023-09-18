@@ -14,11 +14,16 @@ scale = Vector2(0.0685578, 0.0685578)
 texture = ExtResource("2_y4kwl")
 
 [node name="Enemy" parent="." index="1"]
+kill_animation = "enemy_death"
 max_health = 200.0
+start_health = 100.0
 kill_health = 0.0
 
 [node name="PatternManager" parent="Enemy" index="7" node_paths=PackedStringArray("attack_type_array")]
 attack_type_array = [NodePath("Patterns/Circular"), NodePath("Patterns/Fan")]
+
+[node name="EnemyHealth" parent="." index="3"]
+value = 50.0
 
 [editable path="Player"]
 [editable path="Enemy"]

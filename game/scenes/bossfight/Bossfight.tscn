@@ -20,6 +20,7 @@ scale = Vector2(2, 2)
 [node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_yha5m")]
 position = Vector2(988, 269)
 target = NodePath("../Player")
+kill_animation = "run_away"
 max_health = 150.0
 start_health = 150.0
 kill_health = 75.0

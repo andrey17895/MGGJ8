@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0000av81uipe"]
+[gd_scene load_steps=18 format=3 uid="uid://d0000av81uipe"]
 
 [ext_resource type="Script" path="res://scenes/bossfight/scenes/enemy.gd" id="1_6f7jh"]
 [ext_resource type="PackedScene" uid="uid://6212sap2vvmx" path="res://scenes/bossfight/scenes/enemy_projectile.tscn" id="2_hltrb"]
@@ -176,11 +176,28 @@ tracks/3/keys = {
 "values": [1.0, 0.0]
 }
 
+[sub_resource type="Animation" id="Animation_1nfnf"]
+resource_name = "run_away"
+length = 2.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BossfightEnemy:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2000, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_towbs"]
 _data = {
 "RESET": SubResource("Animation_goq6r"),
 "enemy_death": SubResource("Animation_l1wp7"),
-"enemy_hit": SubResource("Animation_50no7")
+"enemy_hit": SubResource("Animation_50no7"),
+"run_away": SubResource("Animation_1nfnf")
 }
 
 [node name="Enemy" type="Area2D" node_paths=PackedStringArray("polygon", "collision") groups=["enemy"]]
